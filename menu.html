@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Level Slide Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 300px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .menu-container.active {
+            transform: translateX(0);
+        }
+
+        .menu-panel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #fff;
+            display: none;
+        }
+
+        .menu-panel.active {
+            left: 0;
+            display: block;
+            position: relative;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            padding: 15px;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu a i {
+            margin-right: 10px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .has-submenu::after {
+            content: " \f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            display: inline-block;
+            margin-left: auto;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            color: red;
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #e2e6ea;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 0;
+            color: #000;
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background: #e2e6ea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="toggle-menu"><i class="fas fa-bars"></i> Menu</button>
+
+    <div class="menu-container" id="menu-container">
+        <div class="menu-panel active" id="menu-main">
+            <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+
+            <ul class="menu">
+                <li><a href="index.html">Shop</a>
+                    <ul>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="#" class="has-submenu" data-target="menu-collections">Collections</a></li>
+                        <li><a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a></li>
+                        <li><a href="index.html">Cards</a></li>
+                        <li><a href="#" class="has-submenu" data-target="menu-sets">Sets</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-panel" id="menu-collections">
+            <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+            <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i> Back</a>
+            <ul class="menu">
+                <li><a href="index.html">Premium</a></li>
+                <li><a href="index.html">Common</a></li>
+                <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                <li><a href="index.html">Other</a></li>
+            </ul>
+        </div>
+        <div class="menu-panel" id="menu-accessories">
+            <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+            <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i> Back</a>
+            <ul class="menu">
+                <li><a href="index.html">Premium</a></li>
+                <li><a href="index.html">Common</a></li>
+                <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                <li><a href="index.html">Other</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-panel" id="menu-exclusive">
+            <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+            <a href="#" class="back-btn" data-target="menu-collections"><i class="fas fa-arrow-left"></i> Back</a>
+            <ul class="menu">
+                <li><a href="index.html">First</a></li>
+                <li><a href="index.html">Second</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const menuContainer = document.getElementById("menu-container");
+        const toggleMenuBtn = document.getElementById("toggle-menu");
+        const closeMenuBtns = document.querySelectorAll("#close-menu"); // Use querySelectorAll for multiple buttons
+        const menuPanels = document.querySelectorAll(".menu-panel");
+        const hasSubmenuLinks = document.querySelectorAll(".has-submenu");
+        const backButtons = document.querySelectorAll(".back-btn");
+        let historyStack = [];
+
+        toggleMenuBtn.addEventListener("click", function () {
+            menuContainer.classList.toggle("active");
+
+            // Reset menu to main panel when opening
+            if (menuContainer.classList.contains("active")) {
+                menuPanels.forEach(panel => panel.classList.remove("active"));
+                document.getElementById("menu-main").classList.add("active"); // Ensure main menu is active
+                historyStack = []; // Clear history when reopening
+            }
+        });
+
+        closeMenuBtns.forEach(btn => {
+            btn.addEventListener("click", function (event) {
+                event.preventDefault();
+                menuContainer.classList.remove("active");
+
+                // Reset menu to main panel when closing
+                menuPanels.forEach(panel => panel.classList.remove("active"));
+                document.getElementById("menu-main").classList.add("active");
+                historyStack = [];
+            });
+        });
+
+        hasSubmenuLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetMenu = document.getElementById(this.dataset.target);
+                if (targetMenu) {
+                    historyStack.push(document.querySelector(".menu-panel.active").id);
+                    menuPanels.forEach(panel => panel.classList.remove("active"));
+                    targetMenu.classList.add("active");
+                }
+            });
+        });
+
+        backButtons.forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+                if (historyStack.length > 0) {
+                    const previousMenu = document.getElementById(historyStack.pop());
+                    if (previousMenu) {
+                        menuPanels.forEach(panel => panel.classList.remove("active"));
+                        previousMenu.classList.add("active");
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            if (!menuContainer.contains(event.target) && !toggleMenuBtn.contains(event.target)) {
+                menuContainer.classList.remove("active");
+
+                // Reset menu to main panel when closing
+                menuPanels.forEach(panel => panel.classList.remove("active"));
+                document.getElementById("menu-main").classList.add("active");
+                historyStack = [];
+            }
+        });
+
+    </script>
+</body>
+
+</html>
