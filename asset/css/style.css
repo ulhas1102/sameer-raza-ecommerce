@@ -381,14 +381,14 @@ body {
 .products .wishlist-btn.active i {
   color: black;
 }
-.products a{
+.products a {
   text-decoration: none;
 }
-.banner-section-home-page{
+.banner-section-home-page {
   /* height: 100vh; */
   position: relative;
 }
-.banner-section-home-page img{
+.banner-section-home-page img {
   height: 100vh;
   object-fit: cover;
   /* position: absolute; */
@@ -398,9 +398,9 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width:768px) {
-  .video-bg{
+@media screen and (max-width: 992px) {
+  .video-bg,
+  .video-section-two {
     min-height: 75dvh;
   }
-  
 }
