@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Default favicon (light theme) -->
+    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon">
+
+    <!-- Preload Favicons (optional but recommended for farter load) -->
+    <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
+    <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font Playfair and lato -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+
+<body class="">
+    <section class="cat-hero">
+        <nav class="navbar header">
+            <div class="container">
+                <!-- Left Side: Toggle Button & Search -->
+                <div class="d-flex align-items-center">
+                    <span id="toggle-menu" class="nav-link"><i class="far fa-bars"></i></span>
+                    <a href="#" class="ms-3"><i class="far fa-search nav-link"></i></a>
+                </div>
+                <!-- Center: Logo -->
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo">
+                </a>
+                <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
+                <div class="nav-icons">
+                    <a href="#"><i class="nav-link fa-regular fa-heart"></i></a>
+                    <a href="#"><i class="nav-link far fa-shopping-cart"></i></a>
+                    <a href="#"><i class="nav-link fa-regular fa-user"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- <button id="toggle-menu" class="btn btn-primary"><i class="far fa-bars"></i> Menu</button> -->
+        <div class="menu-container" id="menu-container">
+            <div class="menu-panel active" id="menu-main">
+                <a href="#" class="close-btn" id="close-menu"><i class="far fa-times"></i> Close</a>
+
+                <ul class="menu">
+                    <li><a href="index.html">Shop</a>
+                        <ul>
+                            <li><a href="index.html">Products</a></li>
+                            <li><a href="#" class="has-submenu" data-target="menu-collections">Collections</a></li>
+                            <li><a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a></li>
+                            <li><a href="index.html">Cards</a></li>
+                            <li><a href="#" class="has-submenu" data-target="menu-sets">Sets</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-panel" id="menu-collections">
+                <a href="#" class="close-btn" id="close-menu"><i class="far fa-times"></i> Close</a>
+                <a href="#" class="back-btn" data-target="menu-main"><i class="far fa-arrow-left"></i>
+                    Collections</a>
+                <ul class="menu">
+                    <li><a href="index.html">Premium</a></li>
+                    <li><a href="index.html">Common</a></li>
+                    <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                    <li><a href="index.html">Other</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-panel" id="menu-accessories">
+                <a href="#" class="close-btn" id="close-menu"><i class="far fa-times"></i> Close</a>
+                <a href="#" class="back-btn" data-target="menu-main"><i class="far fa-arrow-left"></i>
+                    Accessories</a>
+                <ul class="menu">
+                    <li><a href="index.html">Premium</a></li>
+                    <li><a href="index.html">Common</a></li>
+                    <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                    <li><a href="index.html">Other</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-panel" id="menu-exclusive">
+                <a href="#" class="close-btn" id="close-menu"><i class="far fa-times"></i> Close</a>
+                <a href="#" class="back-btn" data-target="menu-collections"><i class="far fa-arrow-left"></i>
+                    Back</a>
+                <ul class="menu">
+                    <li><a href="index.html">First</a></li>
+                    <li><a href="index.html">Second</a></li>
+                </ul>
+            </div>
+        </div>
+        <img src="./asset/image/banner/banner-02.webp" class="hero-bg-image" alt="" srcset="">
+        <div class="hero-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="hero--text">Summer Handbags</h1>
+                        <p class="hero--subtext">The latest selection of summer handbags for women presents mini bags,
+                            tote bags, top handle
+                            and shoulder bags in fresh colors and materials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-5">
+            <div class="row g-0">
+                <!-- Product Card -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon rounded-circle">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-2.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-2 (2).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-3.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-3 (3).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon rounded-circle">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-2.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-2 (2).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-3.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-3 (3).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon rounded-circle">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-2.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-2 (2).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-3.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-3 (3).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="cat--product--card">
+                        <a href="#" class="text-decoration-none">
+                            <div class="wishlist-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-img-wrapper">
+                                <img src="./asset/image/cat/cat-1.webp" class="main-img" alt="Product">
+                                <img src="./asset/image/cat/cat-1 (1).webp" class="hover-img" alt="Hover">
+                            </div>
+                            <div class="product-info text-center">
+                                <h6 class="product--name">Summer T-Shirt</h6>
+                                <div class="cta-shop-now">
+                                    <p>$19.99</p>
+                                    <span>Shop This</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>

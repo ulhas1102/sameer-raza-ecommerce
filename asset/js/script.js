@@ -91,13 +91,40 @@ window.addEventListener("scroll", () => {
 });
 // wishlist icon
 function toggleWishlist(btn) {
-    btn.classList.toggle("active");
-    const icon = btn.querySelector("i");
-    if (icon.classList.contains("far")) {
-      icon.classList.remove("far");
-      icon.classList.add("fas");
-    } else {
-      icon.classList.remove("fas");
-      icon.classList.add("far");
-    }
+  btn.classList.toggle("active");
+  const icon = btn.querySelector("i");
+  if (icon.classList.contains("far")) {
+    icon.classList.remove("far");
+    icon.classList.add("fas");
+  } else {
+    icon.classList.remove("fas");
+    icon.classList.add("far");
   }
+}
+
+// favicon chnage according to the theame
+// Function to update the favicon based on the user's theme preference
+function updateFavicon() {
+  const favicon = document.getElementById("favicon");
+
+  // Check for dark or light theme preference
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    // If dark theme is preferred
+    favicon.setAttribute("href", "./asset/image/logo/fav-white.png");
+  } else {
+    // If light theme is preferred (or no preference)
+    favicon.setAttribute("href", "./asset/image/logo/fav-black.png");
+  }
+}
+
+// Run the updateFavicon function on page load
+window.addEventListener("load", updateFavicon);
+
+// Listen for changes in the user's theme preference
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", updateFavicon);
+// end code
