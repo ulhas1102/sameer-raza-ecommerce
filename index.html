@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <!-- Default favicon (light theme) -->
-    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon">
+    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon" />
 
     <!-- Preload Favicons (optional but recommended for faster load) -->
     <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
     <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image"> -->
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- font Playfair and lato -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
 
 <body class="">
@@ -36,7 +36,7 @@
                     </div>
                     <!-- Center: Logo -->
                     <a class="navbar-brand mx-auto" href="index.html">
-                        <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo">
+                        <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
                     </a>
                     <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
                     <div class="nav-icons">
@@ -46,6 +46,21 @@
                     </div>
                 </div>
             </nav>
+            <div class="banner-hero-text">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center hero-heading">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto,
+                            expedita.
+                        </h1>
+                        <p class="hero-subheading">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                            error nostrum quas officiis necessitatibus tempore ducimus totam
+                            cupiditate nemo facilis.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="-action-buttons">
                 <button id="videoPlayPauseBtn" onclick="toggleVideo()" style="">
                     <i id="videoIcon" class="fas fa-pause"></i>
@@ -60,13 +75,20 @@
                     <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
 
                     <ul class="menu">
-                        <li><a href="index.html">Shop</a>
+                        <li>
+                            <a href="index.html">Shop</a>
                             <ul>
                                 <li><a href="index.html">Products</a></li>
-                                <li><a href="#" class="has-submenu" data-target="menu-collections">Collections</a></li>
-                                <li><a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a></li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-collections">Collections</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a>
+                                </li>
                                 <li><a href="index.html">Cards</a></li>
-                                <li><a href="#" class="has-submenu" data-target="menu-sets">Sets</a></li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-sets">Sets</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -79,7 +101,9 @@
                     <ul class="menu">
                         <li><a href="index.html">Premium</a></li>
                         <li><a href="index.html">Common</a></li>
-                        <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                        <li>
+                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                        </li>
                         <li><a href="index.html">Other</a></li>
                     </ul>
                 </div>
@@ -91,7 +115,9 @@
                     <ul class="menu">
                         <li><a href="index.html">Premium</a></li>
                         <li><a href="index.html">Common</a></li>
-                        <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                        <li>
+                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                        </li>
                         <li><a href="index.html">Other</a></li>
                     </ul>
                 </div>
@@ -112,20 +138,19 @@
         <div class="container py-md-4 py-3">
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <h2 class="text-center">
+                    <h2 class="text-center section-heading">
                         Explore a Selection of the Maison's Creations
                     </h2>
                 </div>
             </div>
             <div class="row g-md-3 g-2">
-
                 <div class="col-md-3 col-6">
                     <div class="products-category">
                         <div class="">
                             <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/1.webp" alt="" class="img-fluid" loading="lazy">
+                                <img src="./asset/image/cat/1.webp" alt="" class="img-fluid" loading="lazy" />
                                 <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
+                                    <h6 class="text text-center">Women's Summer Handbags</h6>
                                 </div>
                             </a>
                         </div>
@@ -135,9 +160,9 @@
                     <div class="products-category">
                         <div class="">
                             <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/2.webp" alt="" class="img-fluid" loading="lazy">
+                                <img src="./asset/image/cat/2.webp" alt="" class="img-fluid" loading="lazy" />
                                 <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
+                                    <h6 class="text text-center">Women's Summer Shoes</h6>
                                 </div>
                             </a>
                         </div>
@@ -147,9 +172,9 @@
                     <div class="products-category">
                         <div class="">
                             <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/3.webp" alt="" class="img-fluid" loading="lazy">
+                                <img src="./asset/image/cat/3.webp" alt="" class="img-fluid" loading="lazy" />
                                 <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
+                                    <h6 class="text text-center">Men's Summer Shoes</h6>
                                 </div>
                             </a>
                         </div>
@@ -159,59 +184,9 @@
                     <div class="products-category">
                         <div class="">
                             <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/4.webp" alt="" class="img-fluid" loading="lazy">
+                                <img src="./asset/image/cat/4.webp" alt="" class="img-fluid" loading="lazy" />
                                 <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-md-3 g-2">
-                <div class="col-md-3 col-6">
-                    <div class="products-category">
-                        <div class="">
-                            <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/5.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="products-category">
-                        <div class="">
-                            <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/5.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="products-category">
-                        <div class="">
-                            <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/5.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="products-category">
-                        <div class="">
-                            <a href="cat-product.html" class="">
-                                <img src="./asset/image/cat/5.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-cat-name">
-                                    <h6 class="text text-center">Category name</h6>
+                                    <h6 class="text text-center">Men's Bags</h6>
                                 </div>
                             </a>
                         </div>
@@ -220,7 +195,17 @@
             </div>
         </div>
     </section>
-    <section class="video-section-two">
+    <section class="video-section-two align-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-heading white text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+                        unde?
+                    </h2>
+                </div>
+            </div>
+        </div>
         <!-- <div class="hero-bg-overlay"></div> -->
         <video src="./asset/video/vide0-02.mp4" id="heroVideo" loop muted autoplay></video>
         <div class="-action-buttons">
@@ -236,28 +221,90 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <p class="text-center mb-0">Men</p>
-                    <h2 class="text-center">
-                        Pre-Fall 2025
-                    </h2>
+                    <h2 class="text-center section-heading">Pre-Fall 2025</h2>
                 </div>
             </div>
             <div class="row g-md-3 g-2">
                 <div class="col-md-3 col-6">
+                    <div class="products position-relative">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <a href="#" class="">
+
+                            <div id="productCarousel1" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
                     <div class="products">
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <div class="">
-                            <a href="" class="">
-                                <img src="./asset/image/product/p-1.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-name-price">
-                                    <h6 class="text">Speedy 18 Bandoulière
-                                    </h6>
-                                    <p class="price">₹2,15,000.00</p>
+                        <a href="#" class="">
+                            <div id="productCarousel2" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
@@ -265,31 +312,40 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <div class="">
-                            <a href="" class="">
-                                <img src="./asset/image/product/p-2.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-name-price">
-                                    <h6 class="text">Products name</h6>
-                                    <p class="price">₹2,15,000.00</p>
+                        <a href="#" class="">
+                            <div id="productCarousel3" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="products">
-                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <div class="">
-                            <a href="" class="">
-                                <img src="./asset/image/product/p-3.webp" alt="" class="img-fluid" loading="lazy">
-                                <div class="product-name-price">
-                                    <h6 class="text">Products name</h6>
-                                    <p class="price">₹2,15,000.00</p>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel3"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel3"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
@@ -298,40 +354,194 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-
                         <a href="#">
-                            <img src="./asset/image/product/p-4.webp" alt="Product" class="img-fluid" loading="lazy">
+                            <div id="productCarousel4" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel4"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel4"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
                             <div class="product-name-price">
                                 <h6 class="text">Product Name</h6>
-                                <p class="price">₹2,15,000.00</p>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
-
             </div>
             <div class="row mt-5">
                 <div class="col-12 justify-content-center d-flex">
-                    <a href="" class="text-center btn btn-outline-secondary rounded-pill px-md-5 py-md-3 py-2">Discover
-                        The
-                        Collection</a>
+                    <a href="" class="text-center btn btn-outline-secondary rounded-pill px-md-4 py-md-2 py-2">Discover
+                        The Collection</a>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="banner-section-home-page py-md-3">
-        <img src="./asset/image/banner/banner-01.jpg" alt="" class="img-fluid">
+        <img src="./asset/image/banner/banner-01.jpg" alt="" class="img-fluid" />
+    </section>
+    <section class="py-md-5 py-3 services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h2 class="section-heading text-center">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+                        maxime!
+                    </h2>
+                    <p class="section-subheading text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                        nulla adipisci veniam accusantium quasi labore, expedita cum
+                        voluptates necessitatibus facilis.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="services">
+                        <img src="./asset/image/services/services-01.webp" alt="" class="img-fluid" />
+                        <div class="desc">
+                            <p class=""><a href="#">Services</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services">
+                        <img src="./asset/image/services/services-02.webp" alt="" class="img-fluid" />
+                        <div class="desc">
+                            <p class=""><a href="#">Art of Gifting</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services">
+                        <img src="./asset/image/services/services-03.webp" alt="" class="img-fluid" />
+                        <div class="desc">
+                            <p class=""><a href="#">Personalisation</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="d-none">
         <div class="container mt-5">
-            <h1> h1:-> Welcome to Our Store</h1>
-            <h2> h2:->Latest Collection</h2>
-            <h3> h3:-> Shop Your Favorite Items</h3>
-            <h4> h4:-> Quality Assured</h4>
-            <h5> h5:->Best Deals Available</h5>
-            <h6> h6:-> Contact Us for More Info</h6>
-            <p> p:-> Find the best shoes, purses, and sandals at unbeatable prices.</p>
+            <h1>h1:-> Welcome to Our Store</h1>
+            <h2>h2:->Latest Collection</h2>
+            <h3>h3:-> Shop Your Favorite Items</h3>
+            <h4>h4:-> Quality Assured</h4>
+            <h5>h5:->Best Deals Available</h5>
+            <h6>h6:-> Contact Us for More Info</h6>
+            <p>
+                p:-> Find the best shoes, purses, and sandals at unbeatable prices.
+            </p>
             <a href="#"> a:->Shop Now</a>
+        </div>
+    </section>
+    <section class="footer-section py-md-5 py-3 border-top">
+        <div class="container ">
+            <div class="row pb-2">
+                <div class="col-md-8">
+                    <div class="brand-logo">
+                        <a href="/"><img src="./asset/image/logo/new-logo.webp" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4 align-content-center pb-2">
+                    <p class="mb-1 head">Follow Us</p>
+                    <div class="social-icons d-flex justify-content-start gap-2 flex-wrap">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address manufacturer">
+                        <p class="head">Full Name and Address of the Manufacturer</p>
+                        <p class="">
+                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                            01 usa <br />
+                            lorem impsum
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address impoter">
+                        <p class="head">Full Name and Address of the Manufacturer</p>
+                        <p class="">
+                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                            01 usa <br />
+                            lorem impsum
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nav-link">
+                        <p class="links head">Links</p>
+                        <div class="row">
+                            <!-- Column 1 -->
+                            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                                <ul class="list-unstyled mb-0 nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Careers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                                <ul class="list-unstyled mb-0 nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Help Center</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">FAQs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top">
+                <p class="mt-4 mb-0 small text-center">
+                    © 2025 Sameer Raza . All rights reserved.
+                </p>
+            </div>
         </div>
     </section>
     <!-- Bootstrap JS -->

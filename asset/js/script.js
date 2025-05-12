@@ -128,3 +128,25 @@ window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", updateFavicon);
 // end code
+
+//
+document.querySelectorAll(".cat--product--card").forEach((card) => {
+  const dots = card.querySelectorAll(".color-dot");
+  dots.forEach((dot) => {
+    dot.addEventListener("click", function () {
+      // 1) hide all carousels
+      card
+        .querySelectorAll(".product-carousel")
+        .forEach((c) => c.classList.add("d-none"));
+
+      // 2) show the target carousel
+      const id = this.dataset.carouselId;
+      const target = card.querySelector("#" + id);
+      if (target) target.classList.remove("d-none");
+
+      // 3) update active class on dots
+      dots.forEach((d) => d.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+});
