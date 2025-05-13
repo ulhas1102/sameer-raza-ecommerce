@@ -14,6 +14,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- font Playfair and lato -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet">
@@ -112,6 +115,28 @@
         <div class="container py-md-5 py-3">
             <div class="row pb-md-3 pb-2">
                 <div class="col-md-6">
+                    <div class="position-relative">
+                        <!-- Button to toggle visibility -->
+                        <button class="btn btn-outline-secondary rounded-pill" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#categoryList" aria-expanded="false" aria-controls="categoryList">
+                            All Handbags
+                        </button>
+
+                        <!-- Category content (Collapse) -->
+                        <div class="collapse" id="categoryList">
+                            <div class="card card-body"
+                                style="position: absolute; top: 100%; left: 0; z-index: 10; width:200px; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 10px; margin-top: 2px;">
+                                <p class="overline">Women Bags</p>
+                                <ul class="list-unstyled">
+                                    <li>Capucines</li>
+                                    <li>GO-14</li>
+                                    <li>LV Icons</li>
+                                    <li>New In</li>
+                                    <li>Monogram Signature</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-md-6">
@@ -308,6 +333,99 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 px-4 position-relative">
+                    <div class="swiper bagLogoSlider">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <div class="cat-name">
+                                    <h6>
+                                       <span> Crossbody Bags</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <!-- more slides -->
+                        </div>
+                        <!-- Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
             </div>
             <div class="row g-1">
                 <!-- Product Card -->
@@ -735,6 +853,8 @@
     </section>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./asset/js/script.js"></script>
 </body>
 

@@ -713,7 +713,7 @@ body {
 .offcanvas-responsive .accordion-button:focus {
   box-shadow: none;
 }
-.offcanvas-responsive .accordion-button:not(.collapsed){
+.offcanvas-responsive .accordion-button:not(.collapsed) {
   background-color: unset;
 }
 /* on small screens (mobile) make it full width */
@@ -722,15 +722,58 @@ body {
     --bs-offcanvas-width: 100%;
     padding: 0px 0px 0px 0px;
   }
-  .footer-section .address .head,.footer-section .head{
-    margin-bottom:8px;
+  .footer-section .address .head,
+  .footer-section .head {
+    margin-bottom: 8px;
     margin-top: 10px;
   }
-  .footer-section .brand-logo{
+  .footer-section .brand-logo {
     margin: auto;
   }
   .cat--product--card .product-info .product--name {
     font-size: 15px;
     font-weight: 500;
   }
+}
+.bagLogoSlider .swiper-button-next,
+.bagLogoSlider .swiper-button-prev {
+  color: #000; /* or any brand color */
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 60%;
+  z-index: 10;
+}
+.bagLogoSlider .swiper-button-next {
+  right: 0;
+}
+.bagLogoSlider .swiper-button-prev {
+  left: 0;
+}
+
+.bagLogoSlider .swiper-button-next::after,
+.bagLogoSlider .swiper-button-prev::after {
+  font-size: 15px;
+  font-weight: bold;
+}
+.bagLogoSlider .cat-name h6 {
+  text-align: center;
+}
+.bagLogoSlider .swiper-slide .cat-name h6 span {
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+.bagLogoSlider .swiper-slide .cat-name h6 span::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  bottom: -1px;
+  left: 0;
+  border-bottom: 1.2px solid #000;
+  transition: 0.3s;
+}
+.bagLogoSlider .swiper-slide:hover .cat-name h6 span::before {
+  width: 100%;
 }
