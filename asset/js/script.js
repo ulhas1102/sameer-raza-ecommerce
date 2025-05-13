@@ -150,28 +150,46 @@ document.querySelectorAll(".cat--product--card").forEach((card) => {
     });
   });
 });
-  document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper(".bagLogoSlider", {
-      slidesPerView: 2,
-      spaceBetween: 20,
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper for .bagLogoSlider
+  new Swiper(".bagLogoSlider", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      },
+      1200: {
+        slidesPerView: 6,
+      },
+    },
+  });
+
+  // Conditionally initialize Swiper for .imageSlider on mobile screens only
+  if (window.innerWidth < 768) {
+    new Swiper(".imageSlider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
       loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      breakpoints: {
-        576: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        992: {
-          slidesPerView: 5,
-        },
-        1200: {
-          slidesPerView: 6,
-        },
-      },
     });
-  });
+  }
+});
