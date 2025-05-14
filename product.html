@@ -110,33 +110,200 @@
             </div>
         </div>
     </section>
+    <!-- Offcanvas Cart Sidebar -->
+    <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header py-2 bg-light">
+            <div class="d-flex gap-3">
+                <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+                <span class="items-count">3 Items</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <!-- Scrollable Product List -->
+        <div class="offcanvas-body d-flex flex-column p-0">
+            <div class="flex-grow-1 overflow-auto">
+                <!-- Product List -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 border-top pt-3">
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Variation: Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Variation: Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Variation: Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat more cart-item here if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Bottom Summary -->
+            <div class="border-top p-3 bg-light">
+                <div class="d-flex justify-content-between info-div">
+                    <span>Subtotal</span>
+                    <span>$2300</span>
+                </div>
+                <div class="d-flex justify-content-between info-div">
+                    <span>Estimated Tax</span>
+                    <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
+                </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-between fw-bold mb-3">
+                    <span>Total</span>
+                    <span>$2300</span>
+                </div>
+                <button class="btn btn-dark w-100 rounded-pill">Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <section class="pb-md-5 pb-3">
         <div class="container-fluid">
             <div class="row g-0">
                 <div class="col-md-6 hero--section">
-                    <div class=" product-page">
+                    <div class="product-page">
                         <!-- Image Slider / Carousel -->
                         <div id="productCarousel" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="./asset/image/in-product/in-p-01.webp" class="d-block w-100"
-                                        alt="Product Image 1">
+                                    <img src="./asset/image/in-product/p-01.webp" class="d-block w-100"
+                                        alt="Product Image 1" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./asset/image/in-product/in-p-02.webp" class="d-block w-100"
-                                        alt="Product Image 2">
+                                    <img src="./asset/image/in-product/p-02.webp" class="d-block w-100"
+                                        alt="Product Image 2" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./asset/image/in-product/in-p-01.webp" class="d-block w-100"
-                                        alt="Product Image 3">
+                                    <img src="./asset/image/in-product/p-04.webp" class="d-block w-100"
+                                        alt="Product Image 3" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./asset/image/in-product/in-p-02.webp" class="d-block w-100"
-                                        alt="Product Image 4">
+                                    <img src="./asset/image/in-product/p-06.webp" class="d-block w-100"
+                                        alt="Product Image 4" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./asset/image/in-product/in-p-01.webp" class="d-block w-100"
-                                        alt="Product Image 5">
+                                    <img src="./asset/image/in-product/p-07.webp" class="d-block w-100"
+                                        alt="Product Image 5" />
                                 </div>
                             </div>
                             <!-- Controls -->
@@ -154,15 +321,16 @@
 
                         <!-- Vertical stacked images for Desktop -->
                         <div class="d-none d-md-block">
-                            <img src="./asset/image/in-product/in-p-02.webp" class="img-fluid " alt="Product Image 1">
-                            <img src="./asset/image/in-product/in-p-01.webp" class="img-fluid " alt="Product Image 2">
-                            <img src="./asset/image/in-product/in-p-02.webp" class="img-fluid " alt="Product Image 3">
-                            <img src="./asset/image/in-product/in-p-01.webp" class="img-fluid " alt="Product Image 4">
-                            <img src="./asset/image/in-product/in-p-02.webp" class="img-fluid " alt="Product Image 5">
+                            <img src="./asset/image/in-product/p-01.webp" class="img-fluid" alt="Product Image 1" />
+                            <img src="./asset/image/in-product/p-02.webp" class="img-fluid" alt="Product Image 2" />
+                            <img src="./asset/image/in-product/p-04.webp" class="img-fluid" alt="Product Image 4" />
+                            <img src="./asset/image/in-product/p-06.webp" class="img-fluid" alt="Product Image 5" />
+                            <img src="./asset/image/in-product/p-07.webp" class="img-fluid" alt="Product Image 5" />
+                            <img src="./asset/image/in-product/p-08.webp" class="img-fluid" alt="Product Image 5" />
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ">
+                <div class="col-md-6">
                     <div class="card border-0 product-details-container">
                         <div class="card-body">
                             <div class="row g-0">
@@ -170,64 +338,105 @@
                                     <div class="selected-product-code-no-container">
                                         <p class="selected-product-code-no mb-0">1AHU16</p>
                                     </div>
-                                    <div class="wishlist-icon rounded-circle"><i class="far fa-heart"></i></div>
+                                    <div class="wishlist-icon rounded-circle">
+                                        <i class="far fa-heart"></i>
+                                    </div>
                                 </div>
                                 <div class="col-12">
-
                                     <div class="selected-product-name-container">
                                         <h5 class="selected-product-name">Crosshand Bags</h5>
                                     </div>
                                     <div class="selectes-product-price-container">
-                                        <h5 class="selected-product-price">₹91,000.00 <br>
+                                        <h5 class="selected-product-price">
+                                            ₹91,000.00 <br />
 
                                             <span class="small">(M.R.P. incl. of all taxes)</span>
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="col-12  colours-container mb-2">
+                                <div class="col-12 colours-container mb-2">
                                     <div class="r d-flex align-content-center justify-content-between">
-                                        <h5 class="head">
-                                            Colours
-                                        </h5>
-                                        <h6 class="color">
-                                            Blue
-                                        </h6>
+                                        <h5 class="head">Colours</h5>
+                                        <h6 class="color">Blue</h6>
                                     </div>
                                     <div class="d-flex flex-wrap">
                                         <div class="color-thumb">
-                                            <img src="./asset/image/product/p-1.webp" alt="Blue">
+                                            <img src="./asset/image/thumb/thum-01.webp" alt="Blue" />
                                         </div>
                                         <div class="color-thumb active">
-                                            <img src="./asset/image/product/p-2.webp" alt="Black">
+                                            <img src="./asset/image/thumb/thum-02.webp" alt="Black" />
                                         </div>
                                         <div class="color-thumb">
-                                            <img src="./asset/image/product/p-3.webp" alt="Beige">
+                                            <img src="./asset/image/thumb/thum-03.webp" alt="Beige" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="dropdown">
-                                        <button
-                                            class="btn btn-outline-secondary w-100 dropdown-toggle d-flex justify-content-between align-items-center"
-                                            type="button" id="sizeDropdown" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Select Size
-                                        </button>
-                                        <ul class="dropdown-menu w-100" aria-labelledby="sizeDropdown">
-                                            <li><a class="dropdown-item" href="#" onclick="selectSize('50')">50</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#" onclick="selectSize('51')">51</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#" onclick="selectSize('52')">52</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#" onclick="selectSize('53')">53</a>
-                                            </li>
-                                        </ul>
+                                <div class="col-12 size-container">
+                                    <h5 class="head">Select Size</h5>
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs mb-2" id="sizeTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="us-tab" data-bs-toggle="tab"
+                                                data-bs-target="#us" type="button" role="tab" aria-controls="us"
+                                                aria-selected="true">
+                                                EU
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="uk-tab" data-bs-toggle="tab"
+                                                data-bs-target="#uk" type="button" role="tab" aria-controls="uk"
+                                                aria-selected="false">
+                                                UK
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab content -->
+                                    <div class="tab-content" id="sizeTabContent">
+                                        <!-- US Sizes -->
+                                        <div class="tab-pane fade show active" id="us" role="tabpanel"
+                                            aria-labelledby="us-tab">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    6
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    7
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    8
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    9
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- UK Sizes -->
+                                        <div class="tab-pane fade" id="uk" role="tabpanel" aria-labelledby="uk-tab">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    5
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    6
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    7
+                                                </button>
+                                                <button class="btn btn-outline-secondary size-box">
+                                                    8
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <a href="#" class="btn btn-outline-secondary rounded-pill w-100 my-3">Add To
-                                        Cart</a>
+
+                                <div class="col-12 text-end">
+                                    <button class="btn btn-outline-secondary rounded-pill w-100 my-3" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                                        Add To Cart
+                                    </button>
                                 </div>
                                 <div class="col-12">
                                     <div class="accordion" id="faqAccordion">
@@ -243,8 +452,8 @@
                                             <div id="faqCollapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
                                                 <div class="accordion-body">
-                                                    You can return the product within 7 days of delivery if it's unused
-                                                    and in original packaging.
+                                                    You can return the product within 7 days of delivery
+                                                    if it's unused and in original packaging.
                                                 </div>
                                             </div>
                                         </div>
@@ -261,24 +470,248 @@
                                             <div id="faqCollapseFour" class="accordion-collapse collapse"
                                                 aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
                                                 <div class="accordion-body">
-                                                    Standard delivery takes 3-5 business days. Express delivery options
-                                                    are also available at checkout.
+                                                    Standard delivery takes 3-5 business days. Express
+                                                    delivery options are also available at checkout.
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </section>
+    <section class="bg-light py-md-5 py-3">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 mt-4">
+                    <div class="product-description">
+                        <h5 class="head mb-3">Product Description</h5>
+                        <p class="text-muted">
+                            Step into luxury and unmatched comfort with our meticulously crafted premium shoes — where
+                            timeless design meets modern innovation.
+                            These shoes are tailored for individuals who appreciate both style and substance, making
+                            them a perfect choice for formal occasions, business settings, and upscale casual looks.
+                        </p>
+                        <p class="text-muted">
+                            Constructed with top-tier full-grain leather, each pair offers a rich texture and superior
+                            breathability, adapting to your feet over time for a personalized fit.
+                            The cushioned insole is lined with moisture-wicking fabric, ensuring all-day freshness,
+                            while the shock-absorbing sole offers seamless support with every step.
+                        </p>
+                        <p class="text-muted">
+                            Whether you're attending a corporate meeting or enjoying a night out, these shoes deliver
+                            sophistication without compromising on comfort.
+                            Hand-stitched detailing and a sleek silhouette elevate your look with a touch of elegance
+                            that never goes out of style.
+                        </p>
+                        <ul class="text-muted ps-4">
+                            <li>Upper: 100% genuine full-grain leather</li>
+                            <li>Lining: Soft microfiber with anti-odor technology</li>
+                            <li>Insole: Memory foam cushioning with arch support</li>
+                            <li>Outsole: Lightweight, slip-resistant rubber sole</li>
+                            <li>Fit: True to size (Available in US & UK sizes)</li>
+                            <li>Colors: Classic Black, Deep Brown, Tan</li>
+                            <li>Handmade with precision and care</li>
+                        </ul>
+                        <p class="text-muted">
+                            Invest in a pair that speaks volumes about your taste — elegant, durable, and always one
+                            step ahead.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-md-4 py-3">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <h2 class="text-center section-heading">You May Also Like This</h2>
+                </div>
+            </div>
+            <div class="row g-md-3 g-2">
+                <div class="col-md-3 col-6">
+                    <div class="products position-relative">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <a href="#" class="">
+
+                            <div id="productCarousel1" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel1"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel1"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="products">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <a href="#" class="">
+                            <div id="productCarousel2" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="products">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <a href="#" class="">
+                            <div id="productCarousel3" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel3"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel3"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="product-name-price mt-2">
+                                <h6 class="text">Speedy 18 Bandoulière</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="products position-relative">
+                        <!-- Wishlist Icon -->
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <a href="#">
+                            <div id="productCarousel4" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item ">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Optional Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel4"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel4"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="product-name-price">
+                                <h6 class="text">Product Name</h6>
+                                <div class="price-section">
+                                    <span class="original-price">₹2,15,000.00</span>
+                                    <span class="discounted-price">₹2,00,000.00</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 justify-content-center d-flex">
+                    <a href="" class="text-center btn btn-outline-secondary rounded-pill px-md-4 py-md-2 py-2">Discover
+                        The Collection</a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="footer-section py-md-5 py-3 border-top">
-        <div class="container ">
+        <div class="container">
             <div class="row pb-2">
                 <div class="col-md-8">
                     <div class="brand-logo">
@@ -286,7 +719,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 align-content-center pb-2">
-                    <p class=" head">Follow Us</p>
+                    <p class="head">Follow Us</p>
                     <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
                         <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
