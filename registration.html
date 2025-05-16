@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <!-- Default favicon (light theme) -->
+    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon" />
+    <!-- Preload Favicons (optional but recommended for faster load) -->
+    <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
+    <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image"> -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- font Playfair and lato -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+</head>
+
+<body class="">
+    <section>
+        <div class="hero--section">
+            <!-- <div class="hero-bg-overlay"></div> -->
+            <nav class="navbar header">
+                <div class="container">
+                    <!-- Left Side: Toggle Button & Search -->
+                    <div class="d-flex align-items-center">
+                        <span id="toggle-menu" class="nav-link"><i class="fas fa-bars"></i></span>
+                        <a href="#" class="ms-3"><i class="fas fa-search nav-link"></i></a>
+                    </div>
+                    <!-- Center: Logo -->
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
+                    </a>
+                    <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
+                    <div class="nav-icons">
+                        <a href="#"><i class="nav-link fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="nav-link fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="nav-link fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <!-- <button id="toggle-menu" class="btn btn-primary"><i class="fas fa-bars"></i> Menu</button> -->
+            <div class="menu-container" id="menu-container">
+                <div class="menu-panel active" id="menu-main">
+                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Shop</a>
+                            <ul>
+                                <li><a href="index.html">Products</a></li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-collections">Collections</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a>
+                                </li>
+                                <li><a href="index.html">Cards</a></li>
+                                <li>
+                                    <a href="#" class="has-submenu" data-target="menu-sets">Sets</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-panel" id="menu-collections">
+                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+                    <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i>
+                        Collections</a>
+                    <ul class="menu">
+                        <li><a href="index.html">Premium</a></li>
+                        <li><a href="index.html">Common</a></li>
+                        <li>
+                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                        </li>
+                        <li><a href="index.html">Other</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-panel" id="menu-accessories">
+                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+                    <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i>
+                        Accessories</a>
+                    <ul class="menu">
+                        <li><a href="index.html">Premium</a></li>
+                        <li><a href="index.html">Common</a></li>
+                        <li>
+                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                        </li>
+                        <li><a href="index.html">Other</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-panel" id="menu-exclusive">
+                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+                    <a href="#" class="back-btn" data-target="menu-collections"><i class="fas fa-arrow-left"></i>
+                        Back</a>
+                    <ul class="menu">
+                        <li><a href="index.html">First</a></li>
+                        <li><a href="index.html">Second</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-md-5 py-3 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="registration-container">
+                        <h3 class="mb-2 text-center">Create Your Account</h3>
+                        <div class="text-end">
+                            <small>
+                                Already have a My account?
+                                <a href="login.html">Log in here.</a>
+                            </small>
+                        </div>
+
+                        <form class="p-md-4 p-2">
+                            <div class="row gy-md-4 gy-3 gx-2 mb-3 justify-content-center">
+                                <div class="col-md-6 form-floating">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                                        required>
+                                    <label for="firstName">First Name <span class="text-danger">*</span></label>
+                                </div>
+                                <div class="col-md-6 form-floating">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name"
+                                        required>
+                                    <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                                </div>
+                                <!-- Email -->
+                                <div class=" col-md-6 form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                </div>
+
+                                <!-- Email Confirmation -->
+                                <div class="form-floating col-md-6">
+                                    <input type="email" class="form-control" id="emailConfirm"
+                                        placeholder="Confirm Email" required>
+                                    <label for="emailConfirm">Email Confirmation <span
+                                            class="text-danger">*</span></label>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-floating col-md-6">
+                                    <input type="password" class="form-control" id="password" placeholder="Password"
+                                        required>
+                                    <label for="password">Password <span class="text-danger">*</span></label>
+                                </div>
+
+
+
+                                <!-- First Name & Last Name -->
+
+
+                                <!-- Date of Birth -->
+                                <div class="form-floating col-md-6">
+                                    <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                                    <label for="dob">Date of Birth</label>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-dark  py-md-3  w-100">Create
+                                        Account</button>
+
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="footer-section py-md-5 py-3 border-top">
+        <div class="container ">
+            <div class="row pb-2">
+                <div class="col-md-8">
+                    <div class="brand-logo">
+                        <a href="/"><img src="./asset/image/logo/new-logo.webp" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4 align-content-center pb-2">
+                    <p class=" head">Follow Us</p>
+                    <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address manufacturer">
+                        <p class="head">Full Name and Address of the Manufacturer</p>
+                        <p class="">
+                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                            01 usa <br />
+                            lorem impsum
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="address impoter">
+                        <p class="head">Full Name and Address of the Manufacturer</p>
+                        <p class="">
+                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                            01 usa <br />
+                            lorem impsum
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nav-link">
+                        <p class="head">Links</p>
+                        <div class="row">
+                            <!-- Column 1 -->
+                            <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                                <ul class="list-unstyled mb-0 nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Careers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                                <ul class="list-unstyled mb-0 nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Help Center</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">FAQs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top">
+                <p class="mt-4 mb-0 small text-center">
+                    © 2025 Sameer Raza . All rights reserved.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./asset/js/script.js"></script>
+</body>
+
+</html>
