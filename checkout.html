@@ -38,11 +38,44 @@
                         <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
                     </a>
                     <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
-                    <div class="nav-icons">
-                        <a href="#"><i class="nav-link fa-regular fa-heart"></i></a>
-                        <a href="" type="button" data-bs-target="#cartOffcanvas" data-bs-toggle="offcanvas"><i
-                                class="nav-link fas fa-shopping-cart"></i></a>
-                        <a href="#"><i class="nav-link fa-regular fa-user"></i></a>
+                    <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
+
+                        <!-- Wishlist -->
+                        <div class="">
+                            <a href="#" class="text-dark position-relative">
+                                <i class="fa-regular fa-heart fs-5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Cart -->
+                        <div class="">
+                            <a href="" type="button" data-bs-target="#cartOffcanvas" data-bs-toggle="offcanvas"><i
+                                    class="nav-link fas fa-shopping-cart"></i></a>
+                        </div>
+                        <!-- User Dropdown (no arrow) -->
+                        <div class="dropdown userDropdownContainer">
+                            <a class="text-dark nav-link p-0" href="#" id="userDropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-user fs-5"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown"
+                                aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html"><i
+                                            class="fa-regular fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#orders"><i
+                                            class="fa-solid fa-box-open me-2"></i>Orders</a></li>
+                                <li><a class="dropdown-item" href="#address"><i
+                                            class="fa-solid fa-location-dot me-2"></i>Address</a></li>
+                                <li><a class="dropdown-item" href="#settings"><i
+                                            class="fa-solid fa-gear me-2"></i>Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#"><i
+                                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </nav>
@@ -272,7 +305,7 @@
                     <span>Total</span>
                     <span>$2300</span>
                 </div>
-                <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a href="checkout.html">
+                <a href="login.html" class="btn btn-dark w-100 rounded-pill">Checkout</a href="checkout.html">
             </div>
         </div>
     </div>
@@ -482,7 +515,7 @@
                                 <span>Total</span>
                                 <strong>$165</strong>
                             </div>
-                            <button class="btn btn-dark rounded-pill w-100 mt-3">Place Order</button>
+                            <a href="login.html" class="btn btn-dark rounded-pill w-100 mt-3">Place Order</a>
                         </div>
                     </div>
                 </div>

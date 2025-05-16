@@ -39,10 +39,44 @@
                         <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
                     </a>
                     <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
-                    <div class="nav-icons">
-                        <a href="#"><i class="nav-link fa-regular fa-heart"></i></a>
-                        <a href="#"><i class="nav-link fas fa-shopping-cart"></i></a>
-                        <a href="#"><i class="nav-link fa-regular fa-user"></i></a>
+                    <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
+
+                        <!-- Wishlist -->
+                        <div class="">
+                            <a href="#" class="text-dark position-relative">
+                                <i class="fa-regular fa-heart fs-5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Cart -->
+                        <div class="">
+                            <a href="" type="button" data-bs-target="#cartOffcanvas" data-bs-toggle="offcanvas"><i
+                                    class="nav-link fas fa-shopping-cart"></i></a>
+                        </div>
+                        <!-- User Dropdown (no arrow) -->
+                        <div class="dropdown userDropdownContainer">
+                            <a class="text-dark nav-link p-0" href="#" id="userDropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-user fs-5"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown"
+                                aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html"><i
+                                            class="fa-regular fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#orders"><i
+                                            class="fa-solid fa-box-open me-2"></i>Orders</a></li>
+                                <li><a class="dropdown-item" href="#address"><i
+                                            class="fa-solid fa-location-dot me-2"></i>Address</a></li>
+                                <li><a class="dropdown-item" href="#settings"><i
+                                            class="fa-solid fa-gear me-2"></i>Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#"><i
+                                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </nav>
@@ -132,6 +166,171 @@
                     </ul>
                 </div>
             </div>
+             <!-- Offcanvas Cart Sidebar -->
+    <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header py-2 bg-light">
+            <div class="d-flex gap-3">
+                <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+                <span class="items-count">3 Items</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- Scrollable Product List -->
+        <div class="offcanvas-body d-flex flex-column p-0">
+            <div class="flex-grow-1 overflow-auto">
+                <!-- Product List -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 border-top pt-3">
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Variation: Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item card p-md-3">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <img src="./asset/image/in-product/p-06.webp"
+                                            class="img-fluid rounded product-img" alt="Product" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-2">
+                                            <div class="col-md-7">
+                                                <h5 class="cart-product-name">Shoes</h5>
+                                                <p class="text-style">Style: Casual</p>
+                                                <p class="mb-0 text-variation">
+                                                    Variation: Black / Large
+                                                </p>
+                                                <p class="mb-md-0 text-available">Available</p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row g-2">
+                                                    <div class="col-md-6 col-6">
+                                                        <select class="form-select form-select-sm" id="quantity1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <p class="text-price">$49.99</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 text-end mt-0">
+                                                <div class="cart-actions">
+                                                    <a href="#" class="">REMOVE</a>
+                                                    <a href="#" class=""><i
+                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat more cart-item here if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Bottom Summary -->
+            <div class="border-top p-3 bg-light">
+                <div class="d-flex justify-content-between info-div">
+                    <span>Subtotal</span>
+                    <span>$2300</span>
+                </div>
+                <div class="d-flex justify-content-between info-div">
+                    <span>Estimated Tax</span>
+                    <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
+                </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-between fw-bold mb-3">
+                    <span>Total</span>
+                    <span>$2300</span>
+                </div>
+                <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a href="checkout.html">
+            </div>
+        </div>
+    </div>
         </div>
     </section>
     <section>
