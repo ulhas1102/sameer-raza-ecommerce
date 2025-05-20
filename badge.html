@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Category Menu</title>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.menu {
+				display: flex;
+				overflow-x: auto;
+				border-bottom: 1px solid #ddd;
+				padding: 15px 0;
+				background-color: #f8f8f8;
+				gap: 20px;
+				scroll-behavior: smooth;
+			}
+
+			/* Menu item styling */
+			.menu-item {
+				flex: 0 0 auto;
+				padding: 10px 20px;
+				background-color: #fff;
+				border-radius: 20px;
+				border: 1px solid #ccc;
+				cursor: pointer;
+				font-size: 0.95rem;
+				transition: background-color 0.3s, color 0.3s;
+				white-space: nowrap;
+			}
+
+			/* Hover/active effect */
+			.menu-item:hover,
+			.menu-item.active {
+				background-color: #007bff;
+				color: #fff;
+				border-color: #007bff;
+			}
+
+
+			.active {
+				border: 1px solid #000;
+				border-bottom: none;
+				position: relative;
+			}
+
+			.active::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -8px;
+				width: 0;
+				height: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				
+			}
+
+			.subcategory-container {
+				margin-top: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+				justify-content: center;
+				overflow-y: auto;
+				max-height: 500px; /* Adjust to make it scrollable */
+			}
+
+			.subcategory-card {
+				/*flex: 1 1 calc(33.333% - 10px); /* 3 cards per row with spacing */
+				background-color: #f8f9fa;
+				border: 1px solid #ccc;
+				padding: 10px;
+				border-radius: 8px;
+				text-align: center;
+				font-size: 0.9rem; /* reduced font size */
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			}
+
+			.subcategory-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.subcategory-name {
+				font-weight: 500;
+				margin-bottom: 8px;
+				font-size: 0.85rem; /* slightly smaller */
+			}
+
+			.subcategory-card .subcategory-name {
+				font-size: 18px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+			}
+
+			.sticky-review {
+				position: sticky;
+				top: 20px;
+				height: 100vh;
+				padding: 20px;
+				background-color: #fff;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+				margin-left: 20px;
+			}
+
+			.review-item {
+				margin-bottom: 10px;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border-radius: 5px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.review-item .review-title {
+				font-weight: bold;
+			}
+
+			.review-item .review-description {
+				font-size: 14px;
+				color: #666;
+			}
+
+			.cart-button {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				padding: 5px 10px;
+				cursor: pointer;
+				border-radius: 5px;
+			}
+
+			.cart-button:disabled {
+				background-color: #d6d6d6;
+			}
+			.badge-container {
+				margin-top: 5px;
+			}
+
+			.badge {
+				font-size: 14px;
+				padding: 5px 10px;
+				border-radius: 12px;
+				background-color: #007bff;
+				color: #fff;
+			}
+
+			.increment-btn, .decrement-btn {
+				background-color: #007bff;
+				color: white;
+				border: none;
+				padding: 5px 10px;
+				font-size: 16px;
+				cursor: pointer;
+				border-radius: 5px;
+				margin-left: 5px;
+			}
+
+			.increment-btn:hover, .decrement-btn:hover {
+				background-color: #0056b3;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="container mt-4">
+
+			<div class="row">
+				<!-- Categories menu -->
+				<div class="col-md-8">
+					<div class="menu">
+												<div class="menu-item" data-category-id="1">
+							<span>Bedroom</span>
+						</div>
+												<div class="menu-item" data-category-id="2">
+							<span>Kitchen</span>
+						</div>
+												<div class="menu-item" data-category-id="3">
+							<span>Living / Family Rooms</span>
+						</div>
+												<div class="menu-item" data-category-id="4">
+							<span>Dining Room / Meals Area</span>
+						</div>
+												<div class="menu-item" data-category-id="5">
+							<span>Laundry</span>
+						</div>
+												<div class="menu-item" data-category-id="6">
+							<span>Garage / Shed</span>
+						</div>
+												<div class="menu-item" data-category-id="7">
+							<span>Outdoor / Garden</span>
+						</div>
+												<div class="menu-item" data-category-id="8">
+							<span>Hall / Entry</span>
+						</div>
+												<div class="menu-item" data-category-id="9">
+							<span>Study / Office</span>
+						</div>
+												<div class="menu-item" data-category-id="10">
+							<span>Fitness / Gym Equipment</span>
+						</div>
+												<div class="menu-item" data-category-id="11">
+							<span>Boxes / Storage</span>
+						</div>
+											</div>
+
+					<div class="subcategory-container" id="subcategory-container">
+						<!-- Subcategories will load here -->
+					</div>
+				</div>
+
+				<!-- Sticky Review Section -->
+				<div class="col-md-4">
+					<div class="sticky-review">
+						<h4>Review Items</h4>
+						<div id="review-list">
+							<!-- Reviews will be displayed here -->
+						</div>
+
+						<form action="https://crm.pathwaymovers.com.au/public/save-inventory" method="POST">
+							<input type="hidden" name="_token" value="h7uyMVutagATnAA8vnl9p5oX01TMXo5rOqRsXd0C" autocomplete="off">							<!-- Hidden inputs will be appended dynamically here -->
+							<input type="hidden" name="contact_id" value="30">
+
+							<button type="submit" class="btn btn-primary mt-3">Submit</button>
+						</form>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				$('.menu-item:first-child').addClass('active');
+
+				// Load subcategories for the default selected category
+				loadSubcategories($('.menu-item.active').data('category-id'));
+
+				// Handle category click
+				$('.menu-item').click(function () {
+					$('.menu-item').removeClass('active');
+					$(this).addClass('active');
+					var category_id = $(this).data('category-id');
+					loadSubcategories(category_id);
+				});
+
+				// Function to load subcategories
+				function loadSubcategories(category_id) {
+					console.log("Category ID:", category_id);
+					// Your existing AJAX code to load subcategories
+				}
+
+				// Load subcategories on page load for the first active category
+				if ($('.menu-item.active').length > 0) {
+					loadSubcategories($('.menu-item.active').data('category-id'));
+				}
+
+				// Handle category click
+				$('.menu-item').click(function () {
+					$('.menu-item').removeClass('active');
+					$(this).addClass('active');
+					var category_id = $(this).data('category-id');
+					loadSubcategories(category_id);
+				});
+
+				// Function to load subcategories
+				function loadSubcategories(category_id) {
+					console.log("Category ID:", category_id);
+					$.ajax({
+						url: 'https://crm.pathwaymovers.com.au/fetch-subcategories',
+						method: 'GET',
+						data: {
+							category_id: category_id,
+							_token: 'h7uyMVutagATnAA8vnl9p5oX01TMXo5rOqRsXd0C'
+						},
+						success: function (response) {
+							console.log('Subcategories response:', response);
+							if (response.status && Array.isArray(response.data)) {
+								let html = '';
+								$.each(response.data, function (index, subcategory) {
+									html += `
+        <div class="subcategory-card" data-subcategory-id="${subcategory.sub_category_id}">
+            <div class="subcategory-name">${subcategory.sub_category_name}</div>
+            <div class="badge-container">
+                <span class="badge badge-pill badge-primary count" data-count="0">0</span>
+			</div>
+			</div>
+    `;
+								});
+
+								$('#subcategory-container').html(html);
+							} else {
+								console.error('Invalid response format:', response);
+								$('#subcategory-container').html('<p>No valid subcategories found.</p>');
+							}
+						},
+						error: function (xhr, status, error) {
+							console.error('Error loading subcategories:', error);
+							$('#subcategory-container').html('<p>Error loading subcategories.</p>');
+						}
+					});
+				}
+
+				// Handle subcategory card click to add to the review
+				$(document).on('click', '.subcategory-card', function () {
+					var subcategory_name = $(this).find('.subcategory-name').text();
+					var subcategory_id = $(this).data('subcategory-id');
+					var countBadge = $(this).find('.count');
+
+					addToReview(subcategory_id, subcategory_name);
+
+					var currentCount = parseInt(countBadge.data('count')) + 1;
+					countBadge.data('count', currentCount);
+					countBadge.text(currentCount);
+
+					updateFormInputs();
+				});
+
+				// Function to add subcategory to review section
+				function addToReview(subcategory_id, subcategory_name) {
+					var reviewItem = $('#review-list').find(`#review-${subcategory_id}`);
+
+					if (reviewItem.length > 0) {
+						var count = reviewItem.find('.count');
+						var currentCount = parseInt(count.text()) + 1;
+						count.text(currentCount);
+					} else {
+						var reviewHtml = `
+                    <div class="review-item" id="review-${subcategory_id}" data-subcategory="${subcategory_name}">
+                        <div>
+                            <div class="review-title">${subcategory_name}</div>
+			</div>
+
+                            <span class="increment-btn">+</span>
+							<div class="review-count">
+                            <span class="count">1</span>
+                            <span class="decrement-btn">-</span>
+			</div>
+			</div>
+                `;
+						$('#review-list').append(reviewHtml);
+					}
+
+					updateFormInputs();
+				}
+
+				// Handle increment button click
+				$(document).on('click', '.increment-btn', function () {
+					var reviewItem = $(this).closest('.review-item');
+					var count = reviewItem.find('.count');
+					var currentCount = parseInt(count.text()) + 1;
+					count.text(currentCount);
+
+					var subcategoryId = reviewItem.attr('id').split('-')[1];
+					var subcategoryBadge = $(`.subcategory-card[data-subcategory-id="${subcategoryId}"]`).find('.count');
+					var subcategoryCount = parseInt(subcategoryBadge.text()) + 1;
+					subcategoryBadge.text(subcategoryCount);
+					subcategoryBadge.data('count', subcategoryCount);
+
+					updateFormInputs();
+				});
+
+				// Handle decrement button click
+				$(document).on('click', '.decrement-btn', function () {
+					var reviewItem = $(this).closest('.review-item');
+					var count = reviewItem.find('.count');
+					var currentCount = parseInt(count.text()) - 1;
+
+					if (currentCount > 0) {
+						count.text(currentCount);
+
+						var subcategoryId = reviewItem.attr('id').split('-')[1];
+						var subcategoryBadge = $(`.subcategory-card[data-subcategory-id="${subcategoryId}"]`).find('.count');
+						var subcategoryCount = parseInt(subcategoryBadge.text()) - 1;
+						subcategoryBadge.text(subcategoryCount);
+						subcategoryBadge.data('count', subcategoryCount);
+					} else {
+						reviewItem.remove();
+
+						var subcategoryId = reviewItem.attr('id').split('-')[1];
+						var subcategoryBadge = $(`.subcategory-card[data-subcategory-id="${subcategoryId}"]`).find('.count');
+						subcategoryBadge.text('0');
+						subcategoryBadge.data('count', 0);
+					}
+
+					updateFormInputs();
+				});
+
+				// Function to update hidden form inputs before submission
+				function updateFormInputs() {
+					// Clear previous hidden inputs
+					$('input[name^="inventory"]').remove();
+
+					$('#review-list .review-item').each(function () {
+						const subcategoryName = $(this).data('subcategory');
+						const subcategoryId = $(this).attr('id').split('-')[1];
+						const count = $(this).find('.count').text();
+
+						const inputNameName = `inventory[${subcategoryId}][item_name]`;
+						const inputNameQty = `inventory[${subcategoryId}][qty]`;
+
+						$('form').append(`
+                    <input type="hidden" name="${inputNameName}" value="${subcategoryName}">
+                    <input type="hidden" name="${inputNameQty}" value="${count}">
+                `);
+					});
+				}
+
+				// Debug: log data before submit
+				$('form').submit(function (e) {
+					console.log($(this).serializeArray());
+				});
+			});
+		</script>
+
+
+	</body>
+
+</html>

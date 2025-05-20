@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <!-- Default favicon (light theme) -->
-    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon">
+    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon" />
 
     <!-- Preload Favicons (optional but recommended for faster load) -->
     <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
     <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image"> -->
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- font Playfair and lato -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
 
 <body class="">
@@ -36,11 +36,10 @@
                 </div>
                 <!-- Center: Logo -->
                 <a class="navbar-brand mx-auto" href="index.html">
-                    <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo">
+                    <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
                 </a>
                 <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
                 <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
-
                     <!-- Wishlist -->
                     <div class="">
                         <a href="#" class="text-dark position-relative">
@@ -60,22 +59,31 @@
                             <i class="fa-regular fa-user fs-5"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#profile"><i
-                                        class="fa-regular fa-user me-2"></i>Profile</a></li>
-                            <li><a class="dropdown-item" href="#orders"><i
-                                        class="fa-solid fa-box-open me-2"></i>Orders</a></li>
-                            <li><a class="dropdown-item" href="#address"><i
-                                        class="fa-solid fa-location-dot me-2"></i>Address</a></li>
-                            <li><a class="dropdown-item" href="#settings"><i
-                                        class="fa-solid fa-gear me-2"></i>Settings</a></li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" href="#profile"><i
+                                        class="fa-regular fa-user me-2"></i>Profile</a>
                             </li>
-                            <li><a class="dropdown-item text-danger" href="#"><i
-                                        class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                            <li>
+                                <a class="dropdown-item" href="order.html"><i
+                                        class="fa-solid fa-box-open me-2"></i>Orders</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#address"><i
+                                        class="fa-solid fa-location-dot me-2"></i>Address</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#settings"><i
+                                        class="fa-solid fa-gear me-2"></i>Settings</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#"><i
+                                        class="fa-solid fa-right-from-bracket me-2"></i>Logout</a>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </nav>
@@ -84,13 +92,20 @@
             <div class="menu-panel active" id="menu-main">
                 <a href="#" class="close-btn" id="close-menu"><i class="fa fa-times"></i> Close</a>
                 <ul class="menu">
-                    <li><a href="index.html">Shop</a>
+                    <li>
+                        <a href="index.html">Shop</a>
                         <ul>
                             <li><a href="index.html">Products</a></li>
-                            <li><a href="#" class="has-submenu" data-target="menu-collections">Collections</a></li>
-                            <li><a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a></li>
+                            <li>
+                                <a href="#" class="has-submenu" data-target="menu-collections">Collections</a>
+                            </li>
+                            <li>
+                                <a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a>
+                            </li>
                             <li><a href="index.html">Cards</a></li>
-                            <li><a href="#" class="has-submenu" data-target="menu-sets">Sets</a></li>
+                            <li>
+                                <a href="#" class="has-submenu" data-target="menu-sets">Sets</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -98,32 +113,33 @@
 
             <div class="menu-panel" id="menu-collections">
                 <a href="#" class="close-btn" id="close-menu"><i class="fa fa-times"></i> Close</a>
-                <a href="#" class="back-btn" data-target="menu-main"><i class="fa fa-arrow-left"></i>
-                    Collections</a>
+                <a href="#" class="back-btn" data-target="menu-main"><i class="fa fa-arrow-left"></i> Collections</a>
                 <ul class="menu">
                     <li><a href="index.html">Premium</a></li>
                     <li><a href="index.html">Common</a></li>
-                    <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                    <li>
+                        <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                    </li>
                     <li><a href="index.html">Other</a></li>
                 </ul>
             </div>
 
             <div class="menu-panel" id="menu-accessories">
                 <a href="#" class="close-btn" id="close-menu"><i class="fa fa-times"></i> Close</a>
-                <a href="#" class="back-btn" data-target="menu-main"><i class="fa fa-arrow-left"></i>
-                    Accessories</a>
+                <a href="#" class="back-btn" data-target="menu-main"><i class="fa fa-arrow-left"></i> Accessories</a>
                 <ul class="menu">
                     <li><a href="index.html">Premium</a></li>
                     <li><a href="index.html">Common</a></li>
-                    <li><a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a></li>
+                    <li>
+                        <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+                    </li>
                     <li><a href="index.html">Other</a></li>
                 </ul>
             </div>
 
             <div class="menu-panel" id="menu-exclusive">
                 <a href="#" class="close-btn" id="close-menu"><i class="fa fa-times"></i> Close</a>
-                <a href="#" class="back-btn" data-target="menu-collections"><i class="fa fa-arrow-left"></i>
-                    Back</a>
+                <a href="#" class="back-btn" data-target="menu-collections"><i class="fa fa-arrow-left"></i> Back</a>
                 <ul class="menu">
                     <li><a href="index.html">First</a></li>
                     <li><a href="index.html">Second</a></li>
@@ -158,9 +174,7 @@
                                                 <div class="col-md-7">
                                                     <h5 class="cart-product-name">Shoes</h5>
                                                     <p class="text-style">Style: Casual</p>
-                                                    <p class="mb-0 text-variation">
-                                                        Black / Large
-                                                    </p>
+                                                    <p class="mb-0 text-variation">Black / Large</p>
                                                     <p class="mb-md-0 text-available">Available</p>
                                                 </div>
                                                 <div class="col-md-5">
@@ -291,26 +305,27 @@
                         <span>Total</span>
                         <span>$2300</span>
                     </div>
-                    <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a href="checkout.html">
+                    <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a>
                 </div>
             </div>
         </div>
-        <img src="./asset/image/banner/cat-banner.webp" class="hero-bg-image" alt="" srcset="">
+        <img src="./asset/image/banner/banner-05.jpg" class="hero-bg-image" alt="" srcset="" />
         <div class="hero-content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="hero--text">Summer Handbags</h1>
-                        <p class="hero--subtext">The latest selection of summer handbags for women presents mini bags,
-                            tote bags, top handle
-                            and shoulder bags in fresh colors and materials.</p>
+                        <h1 class="hero--text">Shoes</h1>
+                        <p class="hero--subtext">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sint culpa iste libero
+                            consectetur impedit deserunt distinctio pariatur facere error.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container py-md-5 py-3">
+        <div class="container py-md-3 py-3">
             <div class="row pb-md-3 pb-2">
                 <div class="col-6">
                     <div class="position-relative">
@@ -323,8 +338,17 @@
 
                         <!-- Category content (Collapse) -->
                         <div class="collapse" id="categoryList">
-                            <div class="card card-body"
-                                style="position: absolute; top: 100%; left: 0; z-index: 10; width:200px; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 10px; margin-top: 2px;">
+                            <div class="card card-body" style="
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 10;
+                    width: 200px;
+                    background-color: white;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                    margin-top: 2px;
+                  ">
                                 <p class="overline">Women Bags</p>
                                 <ul class="list-unstyled">
                                     <li>Capucines</li>
@@ -336,7 +360,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-6">
                     <div class="text-end">
@@ -351,11 +374,13 @@
                     <div class="offcanvas offcanvas-end offcanvas-responsive" tabindex="-1" id="offcanvasFilter"
                         aria-labelledby="offcanvasFilterLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasFilterLabel">Filter Products</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                            <h5 class="offcanvas-title" id="offcanvasFilterLabel">
+                                Filter Products
+                            </h5>
+                            <button type="button" class="btn-close custom-btn-close text-reset"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body pe-md-5 pe-2">
+                        <div class="offcanvas-body pe-md-3 pe-2">
                             <div class="accordion pb-4" id="filterAccordion">
                                 <!-- Sort by Price -->
                                 <div class="accordion-item">
@@ -389,11 +414,11 @@
                                         aria-labelledby="headingIconic" data-bs-parent="#filterAccordion">
                                         <div class="accordion-body">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="iconic1">
+                                                <input class="form-check-input" type="checkbox" value="" id="iconic1" />
                                                 <label class="form-check-label" for="iconic1">Iconic Style 1</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="iconic2">
+                                                <input class="form-check-input" type="checkbox" value="" id="iconic2" />
                                                 <label class="form-check-label" for="iconic2">Iconic Style 2</label>
                                             </div>
                                         </div>
@@ -413,12 +438,12 @@
                                         <div class="accordion-body">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
-                                                    id="collection1">
+                                                    id="collection1" />
                                                 <label class="form-check-label" for="collection1">Summer 2025</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
-                                                    id="collection2">
+                                                    id="collection2" />
                                                 <label class="form-check-label" for="collection2">Limited
                                                     Edition</label>
                                             </div>
@@ -438,11 +463,13 @@
                                         aria-labelledby="headingCategories" data-bs-parent="#filterAccordion">
                                         <div class="accordion-body">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="catTshirt">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="catTshirt" />
                                                 <label class="form-check-label" for="catTshirt">T-Shirts</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="catShirt">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="catShirt" />
                                                 <label class="form-check-label" for="catShirt">Shirts</label>
                                             </div>
                                         </div>
@@ -461,11 +488,13 @@
                                         aria-labelledby="headingMaterials" data-bs-parent="#filterAccordion">
                                         <div class="accordion-body">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="matCotton">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="matCotton" />
                                                 <label class="form-check-label" for="matCotton">Cotton</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="matLinen">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="matLinen" />
                                                 <label class="form-check-label" for="matLinen">Linen</label>
                                             </div>
                                         </div>
@@ -504,7 +533,7 @@
                                         aria-labelledby="headingPrice" data-bs-parent="#filterAccordion">
                                         <div class="accordion-body">
                                             <input type="range" class="form-range" id="filterPrice" min="0" max="1000"
-                                                step="10" value="500">
+                                                step="10" value="500" />
                                             <div class="d-flex justify-content-between">
                                                 <small>$0</small>
                                                 <small>$1000</small>
@@ -512,26 +541,25 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- /.accordion -->
+                            </div>
+                            <!-- /.accordion -->
                             <div class="p-3 border-top apply-filter-btn">
                                 <div class="row g-2">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <button class="btn btn-outline-secondary rounded-pill px-3 w-100">
                                             <i class="fas fa-filter me-2"></i> Apply Filters
                                         </button>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <button class="btn btn-outline-danger rounded-pill w-100">
                                             <i class="fas fa-rotate-left me-2"></i> Reset Filters
                                         </button>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="row justify-content-center mb-5">
                 <div class="col-md-10 px-4 position-relative">
@@ -539,82 +567,82 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-1.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-2.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-3.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-1.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-2.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-3.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-1.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-02.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-2.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-03.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-3.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="./asset/image/bag/bag-01.webp" class="img-fluid" alt="Bag Brand 1" />
+                                <img src="./asset/image/product/p-1.webp" class="img-fluid" alt="Bag Brand 1" />
                                 <div class="cat-name">
                                     <h6>
-                                        <span> Crossbody Bags</span>
+                                        <span>Shoes</span>
                                     </h6>
                                 </div>
                             </div>
@@ -629,17 +657,19 @@
             <div class="row g-1">
                 <!-- Product Card -->
                 <div class="col-6 col-md-4 col-lg-3">
-                    <a href="product.html">
-                        <div class="cat--product--card">
-                            <div class="wishlist-icon rounded-circle"><i class="far fa-heart"></i></div>
+                    <div class="cat--product--card">
+                        <div class="wishlist-icon rounded-circle">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <a href="product.html">
                             <div class="product-img-wrapper">
                                 <div id="blueCarousel-3" class="carousel slide product-carousel" data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#blueCarousel-3"
@@ -655,10 +685,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#redCarousel-3"
@@ -674,10 +704,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button"
@@ -690,47 +720,47 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="product-info">
-                                <div class="row g-0">
-                                    <div class="col-12">
+                        </a>
+                        <div class="product-info">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <a href="product.html">
                                         <h6 class="product--name">Summer T-Shirt</h6>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <div class="price-section">
+                                        <span class="original-price">₹2,15,000</span>
+                                        <span class="discounted-price">₹2,00,000</span>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="price-section">
-                                            <span class="original-price">₹2,15,000</span>
-                                            <span class="discounted-price">₹2,00,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-5 d-flex align-items-end justify-content-end">
-                                        <div class="color-options">
-                                            <span class="color-dot bg-primary me-1 active"
-                                                data-carousel-id="blueCarousel-3"></span>
-                                            <span class="color-dot bg-danger me-1"
-                                                data-carousel-id="redCarousel-3"></span>
-                                            <span class="color-dot bg-success"
-                                                data-carousel-id="greenCarousel-3"></span>
-                                        </div>
+                                </div>
+                                <div class="col-5 d-flex align-items-end justify-content-end">
+                                    <div class="color-options">
+                                        <span class="color-dot bg-primary me-1 active"
+                                            data-carousel-id="blueCarousel-3"></span>
+                                        <span class="color-dot bg-danger me-1" data-carousel-id="redCarousel-3"></span>
+                                        <span class="color-dot bg-success" data-carousel-id="greenCarousel-3"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
-                    <a href="product.html" class="">
-                        <div class="cat--product--card">
-                            <div class="wishlist-icon rounded-circle">
-                                <i class="far fa-heart"></i>
-                            </div>
+                    <div class="cat--product--card">
+                        <div class="wishlist-icon rounded-circle">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <a href="product.html" class="">
                             <div class="product-img-wrapper">
                                 <!-- Blue Carousel -->
                                 <div id="blueCarousel" class="carousel slide product-carousel" data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="..." />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#blueCarousel"
@@ -748,10 +778,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="..." />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="..." />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#redCarousel"
@@ -769,10 +799,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#greenCarousel"
@@ -785,48 +815,50 @@
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="product-info">
-                                <div class="row g-0">
-                                    <div class="col-12">
+                        </a>
+                        <div class="product-info">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <a href="product.html" class="">
                                         <h6 class="product--name">Summer T-Shirt</h6>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <div class="price-section">
+                                        <span class="original-price">₹2,15,000</span>
+                                        <span class="discounted-price">₹2,00,000</span>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="price-section">
-                                            <span class="original-price">₹2,15,000</span>
-                                            <span class="discounted-price">₹2,00,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-5 d-flex align-items-end justify-content-end">
-                                        <!-- Color Swatches -->
-                                        <div class="color-options">
-                                            <span class="color-dot bg-primary me-1 active"
-                                                data-carousel-id="blueCarousel"></span>
-                                            <span class="color-dot bg-danger me-1"
-                                                data-carousel-id="redCarousel"></span>
-                                            <span class="color-dot bg-success" data-carousel-id="greenCarousel"></span>
-                                        </div>
+                                </div>
+                                <div class="col-5 d-flex align-items-end justify-content-end">
+                                    <!-- Color Swatches -->
+                                    <div class="color-options">
+                                        <span class="color-dot bg-primary me-1 active"
+                                            data-carousel-id="blueCarousel"></span>
+                                        <span class="color-dot bg-danger me-1" data-carousel-id="redCarousel"></span>
+                                        <span class="color-dot bg-success" data-carousel-id="greenCarousel"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!-- Add more cards as needed -->
                 <!-- ====== Card 1 ====== -->
                 <div class="col-6 col-md-4 col-lg-3">
-                    <a href="product.html" class="">
-                        <div class="cat--product--card">
-                            <div class="wishlist-icon rounded-circle"><i class="far fa-heart"></i></div>
+                    <div class="cat--product--card">
+                        <div class="wishlist-icon rounded-circle">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <a href="product.html" class="">
                             <div class="product-img-wrapper">
                                 <!-- Blue Carousel for Card 1 -->
                                 <div id="blueCarousel-1" class="carousel slide product-carousel" data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#blueCarousel-1"
@@ -843,10 +875,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#redCarousel-1"
@@ -863,10 +895,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button"
@@ -879,45 +911,47 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="product-info">
-                                <div class="row g-0">
-                                    <div class="col-12">
+                        </a>
+                        <div class="product-info">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <a href="product.html" class="">
                                         <h6 class="product--name">Summer T-Shirt</h6>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <div class="price-section">
+                                        <span class="original-price">₹2,15,000</span>
+                                        <span class="discounted-price">₹2,00,000</span>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="price-section">
-                                            <span class="original-price">₹2,15,000</span>
-                                            <span class="discounted-price">₹2,00,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-5 d-flex align-items-end justify-content-end">
-                                        <div class="color-options">
-                                            <span class="color-dot bg-primary me-1 active"
-                                                data-carousel-id="blueCarousel-1"></span>
-                                            <span class="color-dot bg-danger me-1"
-                                                data-carousel-id="redCarousel-1"></span>
-                                            <span class="color-dot bg-success"
-                                                data-carousel-id="greenCarousel-1"></span>
-                                        </div>
+                                </div>
+                                <div class="col-5 d-flex align-items-end justify-content-end">
+                                    <div class="color-options">
+                                        <span class="color-dot bg-primary me-1 active"
+                                            data-carousel-id="blueCarousel-1"></span>
+                                        <span class="color-dot bg-danger me-1" data-carousel-id="redCarousel-1"></span>
+                                        <span class="color-dot bg-success" data-carousel-id="greenCarousel-1"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!-- ====== Card 2 ====== (same images, IDs suffixed “-2”) -->
                 <div class="col-6 col-md-4 col-lg-3">
-                    <a href="product.html" class="">
-                        <div class="cat--product--card">
-                            <div class="wishlist-icon rounded-circle"><i class="far fa-heart"></i></div>
+                    <div class="cat--product--card">
+                        <div class="wishlist-icon rounded-circle">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <a href="product.html" class="">
                             <div class="product-img-wrapper">
                                 <div id="blueCarousel-2" class="carousel slide product-carousel" data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#blueCarousel-2"
@@ -933,10 +967,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#redCarousel-2"
@@ -952,10 +986,10 @@
                                     data-bs-ride="false">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="" />
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="">
+                                            <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="" />
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button"
@@ -968,31 +1002,31 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="product-info">
-                                <div class="row g-0">
-                                    <div class="col-12">
+                        </a>
+                        <div class="product-info">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <a href="product.html" class="">
                                         <h6 class="product--name">Summer T-Shirt</h6>
+                                    </a>
+                                </div>
+                                <div class="col-7">
+                                    <div class="price-section">
+                                        <span class="original-price">₹2,15,000</span>
+                                        <span class="discounted-price">₹2,00,000</span>
                                     </div>
-                                    <div class="col-7">
-                                        <div class="price-section">
-                                            <span class="original-price">₹2,15,000</span>
-                                            <span class="discounted-price">₹2,00,000</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-5 d-flex align-items-end justify-content-end">
-                                        <div class="color-options">
-                                            <span class="color-dot bg-primary me-1 active"
-                                                data-carousel-id="blueCarousel-2"></span>
-                                            <span class="color-dot bg-danger me-1"
-                                                data-carousel-id="redCarousel-2"></span>
-                                            <span class="color-dot bg-success"
-                                                data-carousel-id="greenCarousel-2"></span>
-                                        </div>
+                                </div>
+                                <div class="col-5 d-flex align-items-end justify-content-end">
+                                    <div class="color-options">
+                                        <span class="color-dot bg-primary me-1 active"
+                                            data-carousel-id="blueCarousel-2"></span>
+                                        <span class="color-dot bg-danger me-1" data-carousel-id="redCarousel-2"></span>
+                                        <span class="color-dot bg-success" data-carousel-id="greenCarousel-2"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!-- ====== Card 3 ====== (same images, IDs suffixed “-3”) -->
             </div>
@@ -1004,7 +1038,7 @@
         </div>
     </section>
     <section class="footer-section py-md-5 py-3 border-top">
-        <div class="container ">
+        <div class="container">
             <div class="row pb-2">
                 <div class="col-md-8">
                     <div class="brand-logo">
@@ -1012,7 +1046,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 align-content-center pb-2">
-                    <p class=" head">Follow Us</p>
+                    <p class="head">Follow Us</p>
                     <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
                         <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
@@ -1069,7 +1103,7 @@
                                         <a href="#" class="nav-link">Help Center</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">Contact Us</a>
+                                        <a href="contact-us.html" class="nav-link">Contact Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">FAQs</a>

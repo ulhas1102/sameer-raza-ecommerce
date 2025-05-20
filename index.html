@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
         rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="./asset/css/style.css" />
@@ -40,7 +42,6 @@
                     </a>
                     <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
                     <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
-
                         <!-- Wishlist -->
                         <div class="">
                             <a href="#" class="text-dark position-relative">
@@ -61,22 +62,31 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown"
                                 aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="profile.html"><i
-                                            class="fa-regular fa-user me-2"></i>Profile</a></li>
-                                <li><a class="dropdown-item" href="#orders"><i
-                                            class="fa-solid fa-box-open me-2"></i>Orders</a></li>
-                                <li><a class="dropdown-item" href="#address"><i
-                                            class="fa-solid fa-location-dot me-2"></i>Address</a></li>
-                                <li><a class="dropdown-item" href="#settings"><i
-                                            class="fa-solid fa-gear me-2"></i>Settings</a></li>
                                 <li>
-                                    <hr class="dropdown-divider">
+                                    <a class="dropdown-item" href="profile.html"><i
+                                            class="fa-regular fa-user me-2"></i>Profile</a>
                                 </li>
-                                <li><a class="dropdown-item text-danger" href="#"><i
-                                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="order.html"><i
+                                            class="fa-solid fa-box-open me-2"></i>Orders</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#address"><i
+                                            class="fa-solid fa-location-dot me-2"></i>Address</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#settings"><i
+                                            class="fa-solid fa-gear me-2"></i>Settings</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#"><i
+                                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a>
+                                </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </nav>
@@ -84,14 +94,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center hero-heading">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto,
-                            expedita.
+                            Style That Speaks
                         </h1>
                         <p class="hero-subheading">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                            error nostrum quas officiis necessitatibus tempore ducimus totam
-                            cupiditate nemo facilis.
+                            Belts. Shoes. Wallets. Perfumes. Redefine your presence with every detail.
                         </p>
+                        <a href="#shop" class="btn btn-outline-secondary hero-btn">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -166,171 +174,172 @@
                     </ul>
                 </div>
             </div>
-             <!-- Offcanvas Cart Sidebar -->
-    <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
-        aria-labelledby="cartOffcanvasLabel">
-        <div class="offcanvas-header py-2 bg-light">
-            <div class="d-flex gap-3">
-                <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
-                <span class="items-count">3 Items</span>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <!-- Scrollable Product List -->
-        <div class="offcanvas-body d-flex flex-column p-0">
-            <div class="flex-grow-1 overflow-auto">
-                <!-- Product List -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 border-top pt-3">
-                            <div class="cart-item card p-md-3">
-                                <div class="row g-2">
-                                    <div class="col-md-3">
-                                        <img src="./asset/image/in-product/p-06.webp"
-                                            class="img-fluid rounded product-img" alt="Product" />
-                                    </div>
-                                    <div class="col-md-9">
+            <!-- Offcanvas Cart Sidebar -->
+            <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
+                aria-labelledby="cartOffcanvasLabel">
+                <div class="offcanvas-header py-2 bg-light">
+                    <div class="d-flex gap-3">
+                        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+                        <span class="items-count">3 Items</span>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- Scrollable Product List -->
+                <div class="offcanvas-body d-flex flex-column p-0">
+                    <div class="flex-grow-1 overflow-auto">
+                        <!-- Product List -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 border-top pt-3">
+                                    <div class="cart-item card p-md-3">
                                         <div class="row g-2">
-                                            <div class="col-md-7">
-                                                <h5 class="cart-product-name">Shoes</h5>
-                                                <p class="text-style">Style: Casual</p>
-                                                <p class="mb-0 text-variation">
-                                                    Black / Large
-                                                </p>
-                                                <p class="mb-md-0 text-available">Available</p>
+                                            <div class="col-md-3">
+                                                <img src="./asset/image/in-product/p-06.webp"
+                                                    class="img-fluid rounded product-img" alt="Product" />
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-9">
                                                 <div class="row g-2">
-                                                    <div class="col-md-6 col-6">
-                                                        <select class="form-select form-select-sm" id="quantity1">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                        </select>
+                                                    <div class="col-md-7">
+                                                        <h5 class="cart-product-name">Shoes</h5>
+                                                        <p class="text-style">Style: Casual</p>
+                                                        <p class="mb-0 text-variation">Black / Large</p>
+                                                        <p class="mb-md-0 text-available">Available</p>
                                                     </div>
-                                                    <div class="col-md-6 col-6">
-                                                        <p class="text-price">$49.99</p>
+                                                    <div class="col-md-5">
+                                                        <div class="row g-2">
+                                                            <div class="col-md-6 col-6">
+                                                                <select class="form-select form-select-sm"
+                                                                    id="quantity1">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 col-6">
+                                                                <p class="text-price">$49.99</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 text-end mt-0">
-                                                <div class="cart-actions">
-                                                    <a href="#" class="">REMOVE</a>
-                                                    <a href="#" class=""><i
-                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                    <div class="col-12 text-end mt-0">
+                                                        <div class="cart-actions">
+                                                            <a href="#" class="">REMOVE</a>
+                                                            <a href="#" class=""><i
+                                                                    class="nav-link fa-regular fa-heart"></i></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="cart-item card p-md-3">
-                                <div class="row g-2">
-                                    <div class="col-md-3">
-                                        <img src="./asset/image/in-product/p-06.webp"
-                                            class="img-fluid rounded product-img" alt="Product" />
-                                    </div>
-                                    <div class="col-md-9">
+                                    <div class="cart-item card p-md-3">
                                         <div class="row g-2">
-                                            <div class="col-md-7">
-                                                <h5 class="cart-product-name">Shoes</h5>
-                                                <p class="text-style">Style: Casual</p>
-                                                <p class="mb-0 text-variation">
-                                                    Variation: Black / Large
-                                                </p>
-                                                <p class="mb-md-0 text-available">Available</p>
+                                            <div class="col-md-3">
+                                                <img src="./asset/image/in-product/p-06.webp"
+                                                    class="img-fluid rounded product-img" alt="Product" />
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-9">
                                                 <div class="row g-2">
-                                                    <div class="col-md-6 col-6">
-                                                        <select class="form-select form-select-sm" id="quantity1">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                        </select>
+                                                    <div class="col-md-7">
+                                                        <h5 class="cart-product-name">Shoes</h5>
+                                                        <p class="text-style">Style: Casual</p>
+                                                        <p class="mb-0 text-variation">
+                                                            Variation: Black / Large
+                                                        </p>
+                                                        <p class="mb-md-0 text-available">Available</p>
                                                     </div>
-                                                    <div class="col-md-6 col-6">
-                                                        <p class="text-price">$49.99</p>
+                                                    <div class="col-md-5">
+                                                        <div class="row g-2">
+                                                            <div class="col-md-6 col-6">
+                                                                <select class="form-select form-select-sm"
+                                                                    id="quantity1">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 col-6">
+                                                                <p class="text-price">$49.99</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 text-end mt-0">
-                                                <div class="cart-actions">
-                                                    <a href="#" class="">REMOVE</a>
-                                                    <a href="#" class=""><i
-                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                    <div class="col-12 text-end mt-0">
+                                                        <div class="cart-actions">
+                                                            <a href="#" class="">REMOVE</a>
+                                                            <a href="#" class=""><i
+                                                                    class="nav-link fa-regular fa-heart"></i></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="cart-item card p-md-3">
-                                <div class="row g-2">
-                                    <div class="col-md-3">
-                                        <img src="./asset/image/in-product/p-06.webp"
-                                            class="img-fluid rounded product-img" alt="Product" />
-                                    </div>
-                                    <div class="col-md-9">
+                                    <div class="cart-item card p-md-3">
                                         <div class="row g-2">
-                                            <div class="col-md-7">
-                                                <h5 class="cart-product-name">Shoes</h5>
-                                                <p class="text-style">Style: Casual</p>
-                                                <p class="mb-0 text-variation">
-                                                    Variation: Black / Large
-                                                </p>
-                                                <p class="mb-md-0 text-available">Available</p>
+                                            <div class="col-md-3">
+                                                <img src="./asset/image/in-product/p-06.webp"
+                                                    class="img-fluid rounded product-img" alt="Product" />
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-9">
                                                 <div class="row g-2">
-                                                    <div class="col-md-6 col-6">
-                                                        <select class="form-select form-select-sm" id="quantity1">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                        </select>
+                                                    <div class="col-md-7">
+                                                        <h5 class="cart-product-name">Shoes</h5>
+                                                        <p class="text-style">Style: Casual</p>
+                                                        <p class="mb-0 text-variation">
+                                                            Variation: Black / Large
+                                                        </p>
+                                                        <p class="mb-md-0 text-available">Available</p>
                                                     </div>
-                                                    <div class="col-md-6 col-6">
-                                                        <p class="text-price">$49.99</p>
+                                                    <div class="col-md-5">
+                                                        <div class="row g-2">
+                                                            <div class="col-md-6 col-6">
+                                                                <select class="form-select form-select-sm"
+                                                                    id="quantity1">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 col-6">
+                                                                <p class="text-price">$49.99</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 text-end mt-0">
-                                                <div class="cart-actions">
-                                                    <a href="#" class="">REMOVE</a>
-                                                    <a href="#" class=""><i
-                                                            class="nav-link fa-regular fa-heart"></i></a>
+                                                    <div class="col-12 text-end mt-0">
+                                                        <div class="cart-actions">
+                                                            <a href="#" class="">REMOVE</a>
+                                                            <a href="#" class=""><i
+                                                                    class="nav-link fa-regular fa-heart"></i></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Repeat more cart-item here if needed -->
                                 </div>
                             </div>
-                            <!-- Repeat more cart-item here if needed -->
                         </div>
+                    </div>
+
+                    <!-- Sticky Bottom Summary -->
+                    <div class="border-top p-3 bg-light">
+                        <div class="d-flex justify-content-between info-div">
+                            <span>Subtotal</span>
+                            <span>$2300</span>
+                        </div>
+                        <div class="d-flex justify-content-between info-div">
+                            <span>Estimated Tax</span>
+                            <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
+                        </div>
+                        <hr class="my-2" />
+                        <div class="d-flex justify-content-between fw-bold mb-3">
+                            <span>Total</span>
+                            <span>$2300</span>
+                        </div>
+                        <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Sticky Bottom Summary -->
-            <div class="border-top p-3 bg-light">
-                <div class="d-flex justify-content-between info-div">
-                    <span>Subtotal</span>
-                    <span>$2300</span>
-                </div>
-                <div class="d-flex justify-content-between info-div">
-                    <span>Estimated Tax</span>
-                    <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
-                </div>
-                <hr class="my-2" />
-                <div class="d-flex justify-content-between fw-bold mb-3">
-                    <span>Total</span>
-                    <span>$2300</span>
-                </div>
-                <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a href="checkout.html">
-            </div>
-        </div>
-    </div>
         </div>
     </section>
     <section>
@@ -395,7 +404,19 @@
         </div>
     </section>
     <section class="video-section-two align-content-center">
-        <div class="container">
+        <div class="hero-bg-overlay"></div>
+        <img src="./asset/image/banner/banner-03.webp" class="img-fluid d-md-block d-none" alt="">
+        <img src="./asset/image/banner/mobile-banner-03.webp" class="img-fluid d-md-none d-block" alt="">
+        <div class="content">
+            <h2 class="section-heading white">
+                Essentials That Define Elegance
+            </h2>
+            <p class="section-subheading">
+                Belts. Shoes. Wallets. Perfumes. Timeless accessories for everyday luxury.
+            </p>
+            <a href="#" class="btn btn-outline-secondary hero-btn">Shop Now</a>
+        </div>
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="section-heading white text-center">
@@ -404,9 +425,9 @@
                     </h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="hero-bg-overlay"></div> -->
-        <video src="./asset/video/vide0-02.mp4" id="heroVideo" loop muted autoplay></video>
+        <!-- <video src="./asset/video/vide0-02.mp4" id="heroVideo" loop muted autoplay></video>
         <div class="-action-buttons">
             <button id="videoPlayPauseBtn" onclick="toggleVideo()" style="">
                 <i id="videoIcon" class="fas fa-pause"></i>
@@ -414,7 +435,7 @@
             <button id="videoMuteBtn" onclick="toggleMute()" style="">
                 <i id="muteIcon" class="fas fa-volume-mute"></i>
             </button>
-        </div>
+        </div> -->
     </section>
     <section class="py-md-4 py-3">
         <div class="container">
@@ -429,18 +450,17 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <a href="#" class="">
-
+                        <a href="cat-product.html" class="">
                             <div id="productCarousel1" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="..." />
                                     </div>
                                 </div>
                                 <!-- Optional Controls -->
@@ -470,20 +490,20 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <a href="#" class="">
+                        <a href="cat-product.html" class="">
                             <div id="productCarousel2" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item ">
-                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item active">
-                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="..." />
                                     </div>
                                 </div>
                                 <!-- Optional Controls -->
@@ -511,20 +531,20 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <a href="#" class="">
+                        <a href="cat-product.html" class="">
                             <div id="productCarousel3" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-inner">
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item active">
-                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="..." />
                                     </div>
-                                    <div class="carousel-item ">
-                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="..." />
                                     </div>
                                 </div>
                                 <!-- Optional Controls -->
@@ -553,20 +573,20 @@
                         <button class="wishlist-btn" onclick="toggleWishlist(this)">
                             <i class="far fa-heart"></i>
                         </button>
-                        <a href="#">
+                        <a href="cat-product.html">
                             <div id="productCarousel4" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item ">
-                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="...">
+                                    <div class="carousel-item">
+                                        <img src="./asset/image/product/p-1.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-2.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-3.webp" class="d-block w-100" alt="..." />
                                     </div>
                                     <div class="carousel-item active">
-                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="...">
+                                        <img src="./asset/image/product/p-4.webp" class="d-block w-100" alt="..." />
                                     </div>
                                 </div>
                                 <!-- Optional Controls -->
@@ -598,9 +618,9 @@
             </div>
         </div>
     </section>
-
     <section class="banner-section-home-page py-md-3">
-        <img src="./asset/image/banner/banner-01.jpg" alt="" class="img-fluid" />
+        <img src="./asset/image/banner/banner-04.webp" alt="" class="img-fluid" />
+
     </section>
     <section class="py-md-5 py-3 services-section">
         <div class="container">
@@ -660,7 +680,7 @@
         </div>
     </section>
     <section class="footer-section py-md-5 py-3 border-top">
-        <div class="container ">
+        <div class="container">
             <div class="row pb-2">
                 <div class="col-md-8">
                     <div class="brand-logo">
@@ -668,7 +688,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 align-content-center pb-2">
-                    <p class=" head">Follow Us</p>
+                    <p class="head">Follow Us</p>
                     <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
                         <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
@@ -722,10 +742,10 @@
                             <div class="col-lg-6 col-6 mb-4 mb-md-0">
                                 <ul class="list-unstyled mb-0 nav">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">Help Center</a>
+                                        <a href="support.html" class="nav-link">Help Center</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">Contact Us</a>
+                                        <a href="contact-us.html" class="nav-link">Contact Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">FAQs</a>

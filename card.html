@@ -1,160 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cart Page</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow-x: hidden;
-        }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
 
-        .cart-hero-section {
-            position: relative;
-            min-height: 100vh;
-            overflow: hidden;
-        }
+      .cart-hero-section {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+      }
 
-        .hero-img {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -1;
-            filter: brightness(0.5);
-        }
+      .hero-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.5);
+      }
 
-        .cart-hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 60px 20px;
-            color: #fff;
-        }
+      .cart-hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 60px 20px;
+        color: #fff;
+      }
 
-        .cart-item {
-            background: #fff;
-            border-radius: 10px;
-        }
+      .cart-item {
+        background: #fff;
+        border-radius: 10px;
+      }
 
-        .cart-item:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+      .cart-item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
+      .order-summary {
+        background: #fff;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 768px) {
         .order-summary {
-            background: #fff;
-            border-radius: 10px;
+          margin-top: 30px;
         }
-
-        @media (max-width: 768px) {
-            .order-summary {
-                margin-top: 30px;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section class="cart-hero-section">
-        <img class="hero-img" src="https://placehold.co/1600x900?text=Cart+Background&font=roboto"
-            alt="Hero Background" />
+      <img
+        class="hero-img"
+        src="https://placehold.co/1600x900?text=Cart+Background&font=roboto"
+        alt="Hero Background"
+      />
 
-        <div class="cart-hero-content">
-            <div class="container">
-                <h1 class="text-white mb-5">Your Shopping Cart</h1>
+      <div class="cart-hero-content">
+        <div class="container">
+          <h1 class="text-white mb-5">Your Shopping Cart</h1>
 
-                <div class="row">
-                    <!-- Cart Items -->
-                    <div class="col-md-8">
-                        <div class="card cart-item shadow-sm p-3 mb-4">
-                            <div class="row g-3 align-items-center">
-                                <!-- Product Image -->
-                                <div class="col-md-2 col-4">
-                                    <img src="https://placehold.co/120x120?text=Product&font=roboto"
-                                        class="img-fluid rounded" alt="Product" />
-                                </div>
+          <div class="row">
+            <!-- Cart Items -->
+            <div class="col-md-8">
+              <div class="card cart-item shadow-sm p-3 mb-4">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 col-4">
+                    <img
+                      src="https://placehold.co/120x120?text=Product&font=roboto"
+                      class="img-fluid rounded"
+                      alt="Product"
+                    />
+                  </div>
 
-                                <!-- Product Details -->
-                                <div class="col-md-5 col-8">
-                                    <h5 class="mb-1">Black Casual Shirt</h5>
-                                    <p class="mb-0 text-muted">Style: Casual</p>
-                                    <p class="mb-0 text-muted">Variation: Black / Large</p>
-                                    <p class="mb-0 text-success">Available</p>
-                                </div>
+                  <!-- Product Details -->
+                  <div class="col-md-5 col-8">
+                    <h5 class="mb-1">Black Casual Shirt</h5>
+                    <p class="mb-0 text-muted">Style: Casual</p>
+                    <p class="mb-0 text-muted">Variation: Black / Large</p>
+                    <p class="mb-0 text-success">Available</p>
+                  </div>
 
-                                <!-- Quantity and Price -->
-                                <div class="col-md-2 col-6">
-                                    <label for="quantity1" class="form-label small">Quantity</label>
-                                    <select class="form-select form-select-sm" id="quantity1">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <p class="fw-bold mt-2">$49.99</p>
-                                </div>
+                  <!-- Quantity and Price -->
+                  <div class="col-md-2 col-6">
+                    <label for="quantity1" class="form-label small"
+                      >Quantity</label
+                    >
+                    <select class="form-select form-select-sm" id="quantity1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <p class="fw-bold mt-2">$49.99</p>
+                  </div>
 
-                                <!-- Cart Actions -->
-                                <div class="col-md-3 col-6 text-end">
-                                    <button class="btn btn-sm btn-outline-secondary mb-1">Edit</button>
-                                    <button class="btn btn-sm btn-outline-danger mb-1">Remove</button>
-                                    <button class="btn btn-sm btn-outline-primary">Save for Later</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Duplicate above card for more items if needed -->
-                    </div>
-
-                    <!-- Order Summary -->
-                    <div class="col-md-4">
-                        <div class="card order-summary shadow-sm p-4">
-                            <h5 class="card-title mb-3">Order Summary</h5>
-                            <p class="mb-1 text-muted small">USCART411621217</p>
-
-                            <div class="d-flex justify-content-between mb-2">
-                                <span>Subtotal</span>
-                                <span>$2,300</span>
-                            </div>
-
-                            <div class="d-flex justify-content-between mb-2">
-                                <span>Shipping</span>
-                                <span>Free (Premium Express)</span>
-                            </div>
-
-                            <div class="d-flex justify-content-between mb-2">
-                                <span>Estimated Tax</span>
-                                <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
-                            </div>
-                            <hr>
-                            <div class="d-flex justify-content-between mb-3 fw-bold">
-                                <span>Estimated Total</span>
-                                <span>$2,300</span>
-                            </div>
-                            <button class="btn btn-outline-dark w-100 mb-3">VIEW DETAILS</button>
-                            <p class="small text-muted mb-0">
-                                You will be charged at the time of shipment. If this is a personalized or made-to-order
-                                purchase, you will be charged at the time of purchase.
-                            </p>
-                        </div>
-                    </div>
+                  <!-- Cart Actions -->
+                  <div class="col-md-3 col-6 text-end">
+                    <button class="btn btn-sm btn-outline-secondary mb-1">
+                      Edit
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger mb-1">
+                      Remove
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary">
+                      Save for Later
+                    </button>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Duplicate above card for more items if needed -->
             </div>
+
+            <!-- Order Summary -->
+            <div class="col-md-4">
+              <div class="card order-summary shadow-sm p-4">
+                <h5 class="card-title mb-3">Order Summary</h5>
+                <p class="mb-1 text-muted small">USCART411621217</p>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Subtotal</span>
+                  <span>$2,300</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Shipping</span>
+                  <span>Free (Premium Express)</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Estimated Tax</span>
+                  <span
+                    ><a href="#" class="text-decoration-underline small"
+                      >Calculate</a
+                    ></span
+                  >
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between mb-3 fw-bold">
+                  <span>Estimated Total</span>
+                  <span>$2,300</span>
+                </div>
+                <button class="btn btn-outline-dark w-100 mb-3">
+                  VIEW DETAILS
+                </button>
+                <p class="small text-muted mb-0">
+                  You will be charged at the time of shipment. If this is a
+                  personalized or made-to-order purchase, you will be charged at
+                  the time of purchase.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>

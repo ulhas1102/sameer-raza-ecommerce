@@ -1,444 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <!-- Default favicon (light theme) -->
-    <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="favicon-light.ico"
+      id="favicon"
+      type="image/x-icon"
+    />
     <!-- Preload Favicons (optional but recommended for faster load) -->
     <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
     <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image"> -->
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- font Playfair and lato -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./asset/css/style.css" />
-</head>
+  </head>
 
-<body class="">
+  <body class="">
     <section>
-        <div class="hero--section">
-            <!-- <div class="hero-bg-overlay"></div> -->
-            <nav class="navbar header">
-                <div class="container">
-                    <!-- Left Side: Toggle Button & Search -->
-                    <div class="d-flex align-items-center">
-                        <span id="toggle-menu" class="nav-link"><i class="fas fa-bars"></i></span>
-                        <a href="#" class="ms-3"><i class="fas fa-search nav-link"></i></a>
-                    </div>
-                    <!-- Center: Logo -->
-                    <a class="navbar-brand mx-auto" href="index.html">
-                        <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
-                    </a>
-                    <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
-                    <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
-
-                        <!-- Wishlist -->
-                        <div class="">
-                            <a href="#" class="text-dark position-relative">
-                                <i class="fa-regular fa-heart fs-5"></i>
-                            </a>
-                        </div>
-
-                        <!-- Cart -->
-                        <div class="">
-                            <a href="" type="button" data-bs-target="#cartOffcanvas" data-bs-toggle="offcanvas"><i
-                                    class="nav-link fas fa-shopping-cart"></i></a>
-                        </div>
-                        <!-- User Dropdown (no arrow) -->
-                        <div class="dropdown userDropdownContainer">
-                            <a class="text-dark nav-link p-0" href="#" id="userDropdown" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-regular fa-user fs-5"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown"
-                                aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="profile.html"><i
-                                            class="fa-regular fa-user me-2"></i>Profile</a></li>
-                                <li><a class="dropdown-item" href="#orders"><i
-                                            class="fa-solid fa-box-open me-2"></i>Orders</a></li>
-                                <li><a class="dropdown-item" href="#address"><i
-                                            class="fa-solid fa-location-dot me-2"></i>Address</a></li>
-                                <li><a class="dropdown-item" href="#settings"><i
-                                            class="fa-solid fa-gear me-2"></i>Settings</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item text-danger" href="#"><i
-                                            class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </nav>
-            <!-- <button id="toggle-menu" class="btn btn-primary"><i class="fas fa-bars"></i> Menu</button> -->
-            <div class="menu-container" id="menu-container">
-                <div class="menu-panel active" id="menu-main">
-                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
-
-                    <ul class="menu">
-                        <li>
-                            <a href="index.html">Shop</a>
-                            <ul>
-                                <li><a href="index.html">Products</a></li>
-                                <li>
-                                    <a href="#" class="has-submenu" data-target="menu-collections">Collections</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a>
-                                </li>
-                                <li><a href="index.html">Cards</a></li>
-                                <li>
-                                    <a href="#" class="has-submenu" data-target="menu-sets">Sets</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="menu-panel" id="menu-collections">
-                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
-                    <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i>
-                        Collections</a>
-                    <ul class="menu">
-                        <li><a href="index.html">Premium</a></li>
-                        <li><a href="index.html">Common</a></li>
-                        <li>
-                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
-                        </li>
-                        <li><a href="index.html">Other</a></li>
-                    </ul>
-                </div>
-
-                <div class="menu-panel" id="menu-accessories">
-                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
-                    <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i>
-                        Accessories</a>
-                    <ul class="menu">
-                        <li><a href="index.html">Premium</a></li>
-                        <li><a href="index.html">Common</a></li>
-                        <li>
-                            <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
-                        </li>
-                        <li><a href="index.html">Other</a></li>
-                    </ul>
-                </div>
-
-                <div class="menu-panel" id="menu-exclusive">
-                    <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
-                    <a href="#" class="back-btn" data-target="menu-collections"><i class="fas fa-arrow-left"></i>
-                        Back</a>
-                    <ul class="menu">
-                        <li><a href="index.html">First</a></li>
-                        <li><a href="index.html">Second</a></li>
-                    </ul>
-                </div>
+      <div class="hero--section">
+        <!-- <div class="hero-bg-overlay"></div> -->
+        <nav class="navbar header">
+          <div class="container">
+            <!-- Left Side: Toggle Button & Search -->
+            <div class="d-flex align-items-center">
+              <span id="toggle-menu" class="nav-link"
+                ><i class="fas fa-bars"></i
+              ></span>
+              <a href="#" class="ms-3"
+                ><i class="fas fa-search nav-link"></i
+              ></a>
             </div>
-            <!-- Offcanvas Cart Sidebar -->
-            <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
-                aria-labelledby="cartOffcanvasLabel">
-                <div class="offcanvas-header py-2 bg-light">
-                    <div class="d-flex gap-3">
-                        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
-                        <span class="items-count">3 Items</span>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <!-- Scrollable Product List -->
-                <div class="offcanvas-body d-flex flex-column p-0">
-                    <div class="flex-grow-1 overflow-auto">
-                        <!-- Product List -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 border-top pt-3">
-                                    <div class="cart-item card p-md-3">
-                                        <div class="row g-2">
-                                            <div class="col-md-3">
-                                                <img src="./asset/image/in-product/p-06.webp"
-                                                    class="img-fluid rounded product-img" alt="Product" />
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="row g-2">
-                                                    <div class="col-md-7">
-                                                        <h5 class="cart-product-name">Shoes</h5>
-                                                        <p class="text-style">Style: Casual</p>
-                                                        <p class="mb-0 text-variation">
-                                                            Black / Large
-                                                        </p>
-                                                        <p class="mb-md-0 text-available">Available</p>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <div class="row g-2">
-                                                            <div class="col-md-6 col-6">
-                                                                <select class="form-select form-select-sm"
-                                                                    id="quantity1">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-6 col-6">
-                                                                <p class="text-price">$49.99</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 text-end mt-0">
-                                                        <div class="cart-actions">
-                                                            <a href="#" class="">REMOVE</a>
-                                                            <a href="#" class=""><i
-                                                                    class="nav-link fa-regular fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart-item card p-md-3">
-                                        <div class="row g-2">
-                                            <div class="col-md-3">
-                                                <img src="./asset/image/in-product/p-06.webp"
-                                                    class="img-fluid rounded product-img" alt="Product" />
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="row g-2">
-                                                    <div class="col-md-7">
-                                                        <h5 class="cart-product-name">Shoes</h5>
-                                                        <p class="text-style">Style: Casual</p>
-                                                        <p class="mb-0 text-variation">
-                                                            Variation: Black / Large
-                                                        </p>
-                                                        <p class="mb-md-0 text-available">Available</p>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <div class="row g-2">
-                                                            <div class="col-md-6 col-6">
-                                                                <select class="form-select form-select-sm"
-                                                                    id="quantity1">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-6 col-6">
-                                                                <p class="text-price">$49.99</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 text-end mt-0">
-                                                        <div class="cart-actions">
-                                                            <a href="#" class="">REMOVE</a>
-                                                            <a href="#" class=""><i
-                                                                    class="nav-link fa-regular fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart-item card p-md-3">
-                                        <div class="row g-2">
-                                            <div class="col-md-3">
-                                                <img src="./asset/image/in-product/p-06.webp"
-                                                    class="img-fluid rounded product-img" alt="Product" />
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="row g-2">
-                                                    <div class="col-md-7">
-                                                        <h5 class="cart-product-name">Shoes</h5>
-                                                        <p class="text-style">Style: Casual</p>
-                                                        <p class="mb-0 text-variation">
-                                                            Variation: Black / Large
-                                                        </p>
-                                                        <p class="mb-md-0 text-available">Available</p>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <div class="row g-2">
-                                                            <div class="col-md-6 col-6">
-                                                                <select class="form-select form-select-sm"
-                                                                    id="quantity1">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-6 col-6">
-                                                                <p class="text-price">$49.99</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 text-end mt-0">
-                                                        <div class="cart-actions">
-                                                            <a href="#" class="">REMOVE</a>
-                                                            <a href="#" class=""><i
-                                                                    class="nav-link fa-regular fa-heart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Repeat more cart-item here if needed -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Sticky Bottom Summary -->
-                    <div class="border-top p-3 bg-light">
-                        <div class="d-flex justify-content-between info-div">
-                            <span>Subtotal</span>
-                            <span>$2300</span>
-                        </div>
-                        <div class="d-flex justify-content-between info-div">
-                            <span>Estimated Tax</span>
-                            <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
-                        </div>
-                        <hr class="my-2" />
-                        <div class="d-flex justify-content-between fw-bold mb-3">
-                            <span>Total</span>
-                            <span>$2300</span>
-                        </div>
-                        <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a
-                            href="checkout.html">
-                    </div>
-                </div>
+            <!-- Center: Logo -->
+            <a class="navbar-brand mx-auto" href="index.html">
+              <img
+                src="./asset/image/logo/new-logo.webp"
+                height=""
+                alt="Logo"
+              />
+            </a>
+            <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
+            <div
+              class="nav-icons d-flex align-items-center justify-content-center gap-3"
+            >
+              <!-- Wishlist -->
+              <div class="">
+                <a href="#" class="text-dark position-relative">
+                  <i class="fa-regular fa-heart fs-5"></i>
+                </a>
+              </div>
+
+              <!-- Cart -->
+              <div class="">
+                <a
+                  href=""
+                  type="button"
+                  data-bs-target="#cartOffcanvas"
+                  data-bs-toggle="offcanvas"
+                  ><i class="nav-link fas fa-shopping-cart"></i
+                ></a>
+              </div>
+              <!-- User Dropdown (no arrow) -->
+              <div class="dropdown userDropdownContainer">
+                <a
+                  class="text-dark nav-link p-0"
+                  href="#"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user fs-5"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow user-dropdown"
+                  aria-labelledby="userDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="profile.html"
+                      ><i class="fa-regular fa-user me-2"></i>Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="order.html"
+                      ><i class="fa-solid fa-box-open me-2"></i>Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#address"
+                      ><i class="fa-solid fa-location-dot me-2"></i>Address</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#settings"
+                      ><i class="fa-solid fa-gear me-2"></i>Settings</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-danger" href="#"
+                      ><i class="fa-solid fa-right-from-bracket me-2"></i
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </nav>
+        <!-- <button id="toggle-menu" class="btn btn-primary"><i class="fas fa-bars"></i> Menu</button> -->
+        <div class="menu-container" id="menu-container">
+          <div class="menu-panel active" id="menu-main">
+            <a href="#" class="close-btn" id="close-menu"
+              ><i class="fas fa-times"></i> Close</a
+            >
+
+            <ul class="menu">
+              <li>
+                <a href="index.html">Shop</a>
+                <ul>
+                  <li><a href="index.html">Products</a></li>
+                  <li>
+                    <a
+                      href="#"
+                      class="has-submenu"
+                      data-target="menu-collections"
+                      >Collections</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="has-submenu"
+                      data-target="menu-accessories"
+                      >Accessories</a
+                    >
+                  </li>
+                  <li><a href="index.html">Cards</a></li>
+                  <li>
+                    <a href="#" class="has-submenu" data-target="menu-sets"
+                      >Sets</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-panel" id="menu-collections">
+            <a href="#" class="close-btn" id="close-menu"
+              ><i class="fas fa-times"></i> Close</a
+            >
+            <a href="#" class="back-btn" data-target="menu-main"
+              ><i class="fas fa-arrow-left"></i> Collections</a
+            >
+            <ul class="menu">
+              <li><a href="index.html">Premium</a></li>
+              <li><a href="index.html">Common</a></li>
+              <li>
+                <a href="#" class="has-submenu" data-target="menu-exclusive"
+                  >Exclusive</a
+                >
+              </li>
+              <li><a href="index.html">Other</a></li>
+            </ul>
+          </div>
+
+          <div class="menu-panel" id="menu-accessories">
+            <a href="#" class="close-btn" id="close-menu"
+              ><i class="fas fa-times"></i> Close</a
+            >
+            <a href="#" class="back-btn" data-target="menu-main"
+              ><i class="fas fa-arrow-left"></i> Accessories</a
+            >
+            <ul class="menu">
+              <li><a href="index.html">Premium</a></li>
+              <li><a href="index.html">Common</a></li>
+              <li>
+                <a href="#" class="has-submenu" data-target="menu-exclusive"
+                  >Exclusive</a
+                >
+              </li>
+              <li><a href="index.html">Other</a></li>
+            </ul>
+          </div>
+
+          <div class="menu-panel" id="menu-exclusive">
+            <a href="#" class="close-btn" id="close-menu"
+              ><i class="fas fa-times"></i> Close</a
+            >
+            <a href="#" class="back-btn" data-target="menu-collections"
+              ><i class="fas fa-arrow-left"></i> Back</a
+            >
+            <ul class="menu">
+              <li><a href="index.html">First</a></li>
+              <li><a href="index.html">Second</a></li>
+            </ul>
+          </div>
         </div>
+        <!-- Offcanvas Cart Sidebar -->
+        <div
+          class="offcanvas offcanvas-end cartOffcanvas"
+          tabindex="-1"
+          id="cartOffcanvas"
+          aria-labelledby="cartOffcanvasLabel"
+        >
+          <div class="offcanvas-header py-2 bg-light">
+            <div class="d-flex gap-3">
+              <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+              <span class="items-count">3 Items</span>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- Scrollable Product List -->
+          <div class="offcanvas-body d-flex flex-column p-0">
+            <div class="flex-grow-1 overflow-auto">
+              <!-- Product List -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 border-top pt-3">
+                    <div class="cart-item card p-md-3">
+                      <div class="row g-2">
+                        <div class="col-md-3">
+                          <img
+                            src="./asset/image/in-product/p-06.webp"
+                            class="img-fluid rounded product-img"
+                            alt="Product"
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row g-2">
+                            <div class="col-md-7">
+                              <h5 class="cart-product-name">Shoes</h5>
+                              <p class="text-style">Style: Casual</p>
+                              <p class="mb-0 text-variation">Black / Large</p>
+                              <p class="mb-md-0 text-available">Available</p>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="row g-2">
+                                <div class="col-md-6 col-6">
+                                  <select
+                                    class="form-select form-select-sm"
+                                    id="quantity1"
+                                  >
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                  <p class="text-price">$49.99</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 text-end mt-0">
+                              <div class="cart-actions">
+                                <a href="#" class="">REMOVE</a>
+                                <a href="#" class=""
+                                  ><i class="nav-link fa-regular fa-heart"></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item card p-md-3">
+                      <div class="row g-2">
+                        <div class="col-md-3">
+                          <img
+                            src="./asset/image/in-product/p-06.webp"
+                            class="img-fluid rounded product-img"
+                            alt="Product"
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row g-2">
+                            <div class="col-md-7">
+                              <h5 class="cart-product-name">Shoes</h5>
+                              <p class="text-style">Style: Casual</p>
+                              <p class="mb-0 text-variation">
+                                Variation: Black / Large
+                              </p>
+                              <p class="mb-md-0 text-available">Available</p>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="row g-2">
+                                <div class="col-md-6 col-6">
+                                  <select
+                                    class="form-select form-select-sm"
+                                    id="quantity1"
+                                  >
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                  <p class="text-price">$49.99</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 text-end mt-0">
+                              <div class="cart-actions">
+                                <a href="#" class="">REMOVE</a>
+                                <a href="#" class=""
+                                  ><i class="nav-link fa-regular fa-heart"></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item card p-md-3">
+                      <div class="row g-2">
+                        <div class="col-md-3">
+                          <img
+                            src="./asset/image/in-product/p-06.webp"
+                            class="img-fluid rounded product-img"
+                            alt="Product"
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row g-2">
+                            <div class="col-md-7">
+                              <h5 class="cart-product-name">Shoes</h5>
+                              <p class="text-style">Style: Casual</p>
+                              <p class="mb-0 text-variation">
+                                Variation: Black / Large
+                              </p>
+                              <p class="mb-md-0 text-available">Available</p>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="row g-2">
+                                <div class="col-md-6 col-6">
+                                  <select
+                                    class="form-select form-select-sm"
+                                    id="quantity1"
+                                  >
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                  <p class="text-price">$49.99</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 text-end mt-0">
+                              <div class="cart-actions">
+                                <a href="#" class="">REMOVE</a>
+                                <a href="#" class=""
+                                  ><i class="nav-link fa-regular fa-heart"></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Repeat more cart-item here if needed -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Sticky Bottom Summary -->
+            <div class="border-top p-3 bg-light">
+              <div class="d-flex justify-content-between info-div">
+                <span>Subtotal</span>
+                <span>$2300</span>
+              </div>
+              <div class="d-flex justify-content-between info-div">
+                <span>Estimated Tax</span>
+                <span
+                  ><a href="#" class="text-decoration-underline small"
+                    >Calculate</a
+                  ></span
+                >
+              </div>
+              <hr class="my-2" />
+              <div class="d-flex justify-content-between fw-bold mb-3">
+                <span>Total</span>
+                <span>$2300</span>
+              </div>
+              <a href="checkout.html" class="btn btn-dark w-100 rounded-pill"
+                >Checkout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="py-md-5 py-3 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="login-container">
-                        <h3 class="mb-md-4 mb-2 text-center">Login To Your Account</h3>
-                        <div class="mb-md-4 mb-2 text-end">
-                            <small>
-                                Don't have a account?
-                                <a href="registration.html">Create here.</a>
-                            </small>
-                        </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="login-container">
+              <h3 class="mb-md-4 mb-2 text-center">Login To Your Account</h3>
+              <div class="mb-md-4 mb-2 text-end">
+                <small>
+                  Don't have a account?
+                  <a href="registration.html">Create here.</a>
+                </small>
+              </div>
 
-                        <form class="p-md-4 p-2">
-                            <div class="row gy-md-4 gy-3 gx-2 mb-3 justify-content-center">
+              <form class="p-md-4 p-2">
+                <div class="row gy-md-4 gy-3 gx-2 mb-3 justify-content-center">
+                  <!-- Email -->
+                  <div class="col-md-10 form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email"
+                      required
+                    />
+                    <label for="email"
+                      >Email <span class="text-danger">*</span></label
+                    >
+                  </div>
 
-                                <!-- Email -->
-                                <div class=" col-md-10 form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                    <label for="email">Email <span class="text-danger">*</span></label>
-                                </div>
-
-
-                                <!-- Password -->
-                                <div class="form-floating col-md-10">
-                                    <input type="password" class="form-control" id="password" placeholder="Password"
-                                        required>
-                                    <label for="password">Password <span class="text-danger">*</span></label>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="submit" class="btn btn-dark  py-md-3  w-100">LogIn
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Submit Button -->
-                        </form>
-                    </div>
+                  <!-- Password -->
+                  <div class="form-floating col-md-10">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Password"
+                      required
+                    />
+                    <label for="password"
+                      >Password <span class="text-danger">*</span></label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <button type="submit" class="btn btn-dark py-md-3 w-100">
+                      LogIn
+                    </button>
+                  </div>
                 </div>
+                <!-- Submit Button -->
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section class="footer-section py-md-5 py-3 border-top">
-        <div class="container ">
-            <div class="row pb-2">
-                <div class="col-md-8">
-                    <div class="brand-logo">
-                        <a href="/"><img src="./asset/image/logo/new-logo.webp" alt="" /></a>
-                    </div>
+      <div class="container">
+        <div class="row pb-2">
+          <div class="col-md-8">
+            <div class="brand-logo">
+              <a href="/"
+                ><img src="./asset/image/logo/new-logo.webp" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-4 align-content-center pb-2">
+            <p class="head">Follow Us</p>
+            <div
+              class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap"
+            >
+              <a href="#" class="social-icon facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="social-icon pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" class="social-icon whatsapp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="address manufacturer">
+              <p class="head">Full Name and Address of the Manufacturer</p>
+              <p class="">
+                Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                01 usa <br />
+                lorem impsum
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="address impoter">
+              <p class="head">Full Name and Address of the Manufacturer</p>
+              <p class="">
+                Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+                01 usa <br />
+                lorem impsum
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="nav-link">
+              <p class="head">Links</p>
+              <div class="row">
+                <!-- Column 1 -->
+                <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                  <ul class="list-unstyled mb-0 nav">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Blog</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="col-md-4 align-content-center pb-2">
-                    <p class=" head">Follow Us</p>
-                    <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="address manufacturer">
-                        <p class="head">Full Name and Address of the Manufacturer</p>
-                        <p class="">
-                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
-                            01 usa <br />
-                            lorem impsum
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="address impoter">
-                        <p class="head">Full Name and Address of the Manufacturer</p>
-                        <p class="">
-                            Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
-                            01 usa <br />
-                            lorem impsum
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="nav-link">
-                        <p class="head">Links</p>
-                        <div class="row">
-                            <!-- Column 1 -->
-                            <div class="col-lg-6 col-6 mb-4 mb-md-0">
-                                <ul class="list-unstyled mb-0 nav">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">About Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Careers</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
 
-                            <!-- Column 2 -->
-                            <div class="col-lg-6 col-6 mb-4 mb-md-0">
-                                <ul class="list-unstyled mb-0 nav">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Help Center</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Contact Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">FAQs</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Column 2 -->
+                <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                  <ul class="list-unstyled mb-0 nav">
+                    <li class="nav-item">
+                      <a href="support.html" class="nav-link">Help Center</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="contact-us.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">FAQs</a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </div>
-            <div class="row border-top">
-                <p class="mt-4 mb-0 small text-center">
-                    © 2025 Sameer Raza . All rights reserved.
-                </p>
-            </div>
+          </div>
         </div>
+        <div class="row border-top">
+          <p class="mt-4 mb-0 small text-center">
+            © 2025 Sameer Raza . All rights reserved.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./asset/js/script.js"></script>
-</body>
-
+  </body>
 </html>
