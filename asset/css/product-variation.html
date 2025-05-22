@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Color Variation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+
+        .product-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-swatch {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .color-swatch.active {
+            border-color: black;
+            transform: scale(1.2);
+        }
+
+        .selected-color {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-container">
+        <div class="product-image">
+            <img id="productImage" src="" alt="Product Image" />
+        </div>
+
+        <div class="color-options" id="colorOptions"></div>
+
+        <div class="selected-color" id="selectedColor">Select a color</div>
+    </div>
+
+    <script>
+        // Array of color variations with dummy realistic shoe images
+        const productColors = [
+            {
+                name: "Black",
+                colorCode: "#000000",
+                imageUrl: "https://placehold.co/500x300/000000/ffffff?text=Black+Shoe"
+            },
+            {
+                name: "White",
+                colorCode: "#ffffff",
+                imageUrl: "https://placehold.co/500x300/ffffff/000000?text=White+Shoe"
+            },
+            {
+                name: "Red",
+                colorCode: "#ff0000",
+                imageUrl: "https://placehold.co/500x300/ff0000/ffffff?text=Red+Shoe"
+            },
+            {
+                name: "Blue",
+                colorCode: "#007bff",
+                imageUrl: "https://placehold.co/500x300/007bff/ffffff?text=Blue+Shoe"
+            },
+            {
+                name: "Green",
+                colorCode: "#28a745",
+                imageUrl: "https://placehold.co/500x300/28a745/ffffff?text=Green+Shoe"
+            }
+        ];
+
+        const productImage = document.getElementById("productImage");
+        const colorOptions = document.getElementById("colorOptions");
+        const selectedColor = document.getElementById("selectedColor");
+
+        // Load swatches
+        productColors.forEach((color, index) => {
+            const swatch = document.createElement("div");
+            swatch.classList.add("color-swatch");
+            swatch.style.backgroundColor = color.colorCode;
+
+            // On click - update image and color text
+            swatch.addEventListener("mouseenter", () => {
+                document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+                swatch.classList.add("active");
+                productImage.src = color.imageUrl;
+                selectedColor.textContent = `Selected Color: ${color.name}`;
+            });
+
+            colorOptions.appendChild(swatch);
+
+            // Default selection (first color)
+            if (index === 0) {
+                swatch.classList.add("active");
+                productImage.src = color.imageUrl;
+                selectedColor.textContent = `Selected Color: ${color.name}`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

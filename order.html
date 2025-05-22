@@ -1,1141 +1,995 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Page</title>
-    <!-- Default favicon (light theme) -->
-    <link
-      rel="icon"
-      href="favicon-light.ico"
-      id="favicon"
-      type="image/x-icon"
-    />
-    <!-- Preload Favicons (optional but recommended for faster load) -->
-    <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Page</title>
+  <!-- Default favicon (light theme) -->
+  <link rel="icon" href="favicon-light.ico" id="favicon" type="image/x-icon" />
+  <!-- Preload Favicons (optional but recommended for faster load) -->
+  <!-- <link rel="preload" href="./asset/image/logo/fav-white.webp" as="image">
     <link rel="preload" href="./asset/image/logo/fav-black.webp" as="image"> -->
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- font Playfair and lato -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./asset/css/style.css" />
-  </head>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- font Playfair and lato -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="./asset/css/style.css" />
+</head>
 
-  <body class="">
-    <section>
-      <div class="hero--section">
-        <!-- <div class="hero-bg-overlay"></div> -->
-        <nav class="navbar header">
-          <div class="container">
-            <!-- Left Side: Toggle Button & Search -->
-            <div class="d-flex align-items-center">
-              <span id="toggle-menu" class="nav-link"
-                ><i class="fas fa-bars"></i
-              ></span>
-              <a href="#" class="ms-3"
-                ><i class="fas fa-search nav-link"></i
-              ></a>
+<body class="">
+  <section>
+    <div class="hero--section">
+      <!-- <div class="hero-bg-overlay"></div> -->
+      <nav class="navbar header">
+        <div class="container">
+          <!-- Left Side: Toggle Button & Search -->
+          <div class="d-flex align-items-center">
+            <span id="toggle-menu" class="nav-link"><i class="fas fa-bars"></i></span>
+            <a href="#" class="ms-3"><i class="fas fa-search nav-link"></i></a>
+          </div>
+          <!-- Center: Logo -->
+          <a class="navbar-brand mx-auto" href="index.html">
+            <img src="./asset/image/logo/new-logo.webp" height="" alt="Logo" />
+          </a>
+          <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
+          <!-- NAV ICONS -->
+          <div class="nav-icons d-flex align-items-center justify-content-center gap-3">
+            <!-- Wishlist -->
+            <div class="">
+              <a href="#" class="text-dark position-relative">
+                <i class="fa-regular fa-heart fs-5"></i>
+              </a>
             </div>
-            <!-- Center: Logo -->
-            <a class="navbar-brand mx-auto" href="index.html">
-              <img
-                src="./asset/image/logo/new-logo.webp"
-                height=""
-                alt="Logo"
-              />
-            </a>
-            <!-- Right Side: Cart, Login/Sign-Up, Wishlist -->
-            <!-- NAV ICONS -->
-            <div
-              class="nav-icons d-flex align-items-center justify-content-center gap-3"
-            >
-              <!-- Wishlist -->
-              <div class="">
-                <a href="#" class="text-dark position-relative">
-                  <i class="fa-regular fa-heart fs-5"></i>
-                </a>
-              </div>
 
-              <!-- Cart -->
-              <div class="">
-                <a
-                  href=""
-                  type="button"
-                  data-bs-target="#cartOffcanvas"
-                  data-bs-toggle="offcanvas"
-                  ><i class="nav-link fas fa-shopping-cart"></i
-                ></a>
-              </div>
-              <!-- User Dropdown (no arrow) -->
-              <div class="dropdown userDropdownContainer">
-                <a
-                  class="text-dark nav-link p-0"
-                  href="#"
-                  id="userDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fa-regular fa-user fs-5"></i>
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-end shadow user-dropdown"
-                  aria-labelledby="userDropdown"
-                >
-                  <li>
-                    <a class="dropdown-item" href="profile.html"
-                      ><i class="fa-regular fa-user me-2"></i>Profile</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="order.html"
-                      ><i class="fa-solid fa-box-open me-2"></i>Orders</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#address"
-                      ><i class="fa-solid fa-location-dot me-2"></i>Address</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#settings"
-                      ><i class="fa-solid fa-gear me-2"></i>Settings</a
-                    >
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-danger" href="#"
-                      ><i class="fa-solid fa-right-from-bracket me-2"></i
-                      >Logout</a
-                    >
-                  </li>
-                </ul>
-              </div>
+            <!-- Cart -->
+            <div class="">
+              <a href="" type="button" data-bs-target="#cartOffcanvas" data-bs-toggle="offcanvas"><i
+                  class="nav-link fas fa-shopping-cart"></i></a>
             </div>
-          </div>
-        </nav>
-        <!-- <button id="toggle-menu" class="btn btn-primary"><i class="fas fa-bars"></i> Menu</button> -->
-        <div class="menu-container" id="menu-container">
-          <div class="menu-panel active" id="menu-main">
-            <a href="#" class="close-btn" id="close-menu"
-              ><i class="fas fa-times"></i> Close</a
-            >
-            <ul class="menu">
-              <li>
-                <a href="index.html">Shop</a>
-                <ul>
-                  <li><a href="index.html">Products</a></li>
-                  <li>
-                    <a
-                      href="#"
-                      class="has-submenu"
-                      data-target="menu-collections"
-                      >Collections</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="has-submenu"
-                      data-target="menu-accessories"
-                      >Accessories</a
-                    >
-                  </li>
-                  <li><a href="index.html">Cards</a></li>
-                  <li>
-                    <a href="#" class="has-submenu" data-target="menu-sets"
-                      >Sets</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-          <div class="menu-panel" id="menu-collections">
-            <a href="#" class="close-btn" id="close-menu"
-              ><i class="fas fa-times"></i> Close</a
-            >
-            <a href="#" class="back-btn" data-target="menu-main"
-              ><i class="fas fa-arrow-left"></i> Collections</a
-            >
-            <ul class="menu">
-              <li><a href="index.html">Premium</a></li>
-              <li><a href="index.html">Common</a></li>
-              <li>
-                <a href="#" class="has-submenu" data-target="menu-exclusive"
-                  >Exclusive</a
-                >
-              </li>
-              <li><a href="index.html">Other</a></li>
-            </ul>
-          </div>
-
-          <div class="menu-panel" id="menu-accessories">
-            <a href="#" class="close-btn" id="close-menu"
-              ><i class="fas fa-times"></i> Close</a
-            >
-            <a href="#" class="back-btn" data-target="menu-main"
-              ><i class="fas fa-arrow-left"></i> Accessories</a
-            >
-            <ul class="menu">
-              <li><a href="index.html">Premium</a></li>
-              <li><a href="index.html">Common</a></li>
-              <li>
-                <a href="#" class="has-submenu" data-target="menu-exclusive"
-                  >Exclusive</a
-                >
-              </li>
-              <li><a href="index.html">Other</a></li>
-            </ul>
-          </div>
-
-          <div class="menu-panel" id="menu-exclusive">
-            <a href="#" class="close-btn" id="close-menu"
-              ><i class="fas fa-times"></i> Close</a
-            >
-            <a href="#" class="back-btn" data-target="menu-collections"
-              ><i class="fas fa-arrow-left"></i> Back</a
-            >
-            <ul class="menu">
-              <li><a href="index.html">First</a></li>
-              <li><a href="index.html">Second</a></li>
-            </ul>
+            <!-- User Dropdown (no arrow) -->
+            <div class="dropdown userDropdownContainer">
+              <a class="text-dark nav-link p-0" href="#" id="userDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa-regular fa-user fs-5"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow user-dropdown" aria-labelledby="userDropdown">
+                <li>
+                  <a class="dropdown-item" href="profile.html"><i class="fa-regular fa-user me-2"></i>Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="order.html"><i class="fa-solid fa-box-open me-2"></i>Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#address"><i class="fa-solid fa-location-dot me-2"></i>Address</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#settings"><i class="fa-solid fa-gear me-2"></i>Settings</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#"><i
+                      class="fa-solid fa-right-from-bracket me-2"></i>Logout</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <!-- Offcanvas Cart Sidebar -->
-        <div
-          class="offcanvas offcanvas-end cartOffcanvas"
-          tabindex="-1"
-          id="cartOffcanvas"
-          aria-labelledby="cartOffcanvasLabel"
-        >
-          <div class="offcanvas-header py-2 bg-light">
-            <div class="d-flex gap-3">
-              <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
-              <span class="items-count">3 Items</span>
-            </div>
-            <button
-              type="button"
-              class="btn btn-dark rounded-circle"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            >
-              <i class="fa-solid fa-xmark text-white"></i>
-            </button>
+      </nav>
+      <!-- <button id="toggle-menu" class="btn btn-primary"><i class="fas fa-bars"></i> Menu</button> -->
+      <div class="menu-container" id="menu-container">
+        <div class="menu-panel active" id="menu-main">
+          <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+          <ul class="menu">
+            <li>
+              <a href="index.html">Shop</a>
+              <ul>
+                <li><a href="index.html">Products</a></li>
+                <li>
+                  <a href="#" class="has-submenu" data-target="menu-collections">Collections</a>
+                </li>
+                <li>
+                  <a href="#" class="has-submenu" data-target="menu-accessories">Accessories</a>
+                </li>
+                <li><a href="index.html">Cards</a></li>
+                <li>
+                  <a href="#" class="has-submenu" data-target="menu-sets">Sets</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="menu-collections">
+          <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+          <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i> Collections</a>
+          <ul class="menu">
+            <li><a href="index.html">Premium</a></li>
+            <li><a href="index.html">Common</a></li>
+            <li>
+              <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+            </li>
+            <li><a href="index.html">Other</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="menu-accessories">
+          <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+          <a href="#" class="back-btn" data-target="menu-main"><i class="fas fa-arrow-left"></i> Accessories</a>
+          <ul class="menu">
+            <li><a href="index.html">Premium</a></li>
+            <li><a href="index.html">Common</a></li>
+            <li>
+              <a href="#" class="has-submenu" data-target="menu-exclusive">Exclusive</a>
+            </li>
+            <li><a href="index.html">Other</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="menu-exclusive">
+          <a href="#" class="close-btn" id="close-menu"><i class="fas fa-times"></i> Close</a>
+          <a href="#" class="back-btn" data-target="menu-collections"><i class="fas fa-arrow-left"></i> Back</a>
+          <ul class="menu">
+            <li><a href="index.html">First</a></li>
+            <li><a href="index.html">Second</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Offcanvas Cart Sidebar -->
+      <div class="offcanvas offcanvas-end cartOffcanvas" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header py-2 bg-light">
+          <div class="d-flex gap-3">
+            <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+            <span class="items-count">3 Items</span>
           </div>
-          <!-- Scrollable Product List -->
-          <div class="offcanvas-body d-flex flex-column p-0">
-            <div class="flex-grow-1 overflow-auto">
-              <!-- Product List -->
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 border-top pt-3">
-                    <div class="order-item card p-md-3">
-                      <div class="row g-2">
-                        <div class="col-md-3">
-                          <img
-                            src="./asset/image/in-product/p-06.webp"
-                            class="img-fluid rounded product-img"
-                            alt="Product"
-                          />
-                        </div>
-                        <div class="col-md-9">
-                          <div class="row g-2">
-                            <div class="col-md-7">
-                              <h5 class="cart-product-name">Shoes</h5>
-                              <p class="text-style">Style: Casual</p>
-                              <p class="mb-0 text-variation">Black / Large</p>
-                              <p class="mb-md-0 text-available">Available</p>
-                            </div>
-                            <div class="col-md-5">
-                              <div class="row g-2">
-                                <div class="col-md-6 col-6">
-                                  <select
-                                    class="form-select form-select-sm"
-                                    id="quantity1"
-                                  >
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-6 col-6">
-                                  <p class="text-price">$49.99</p>
-                                </div>
+          <button type="button" class="btn btn-dark rounded-circle" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-solid fa-xmark text-white"></i>
+          </button>
+        </div>
+        <!-- Scrollable Product List -->
+        <div class="offcanvas-body d-flex flex-column p-0">
+          <div class="flex-grow-1 overflow-auto">
+            <!-- Product List -->
+            <div class="container">
+              <div class="row">
+                <div class="col-12 border-top pt-3">
+                  <div class="order-item card p-md-3">
+                    <div class="row g-2">
+                      <div class="col-md-3">
+                        <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img"
+                          alt="Product" />
+                      </div>
+                      <div class="col-md-9">
+                        <div class="row g-2">
+                          <div class="col-md-7">
+                            <h5 class="cart-product-name">Shoes</h5>
+                            <p class="text-style">Style: Casual</p>
+                            <p class="mb-0 text-variation">Black / Large</p>
+                            <p class="mb-md-0 text-available">Available</p>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="row g-2">
+                              <div class="col-md-6 col-6">
+                                <select class="form-select form-select-sm" id="quantity1">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 col-6">
+                                <p class="text-price">$49.99</p>
                               </div>
                             </div>
-                            <div class="col-12 text-end mt-0">
-                              <div class="cart-actions">
-                                <a href="#" class="">REMOVE</a>
-                                <a href="#" class=""
-                                  ><i class="nav-link fa-regular fa-heart"></i
-                                ></a>
-                              </div>
+                          </div>
+                          <div class="col-12 text-end mt-0">
+                            <div class="cart-actions">
+                              <a href="#" class="">REMOVE</a>
+                              <a href="#" class=""><i class="nav-link fa-regular fa-heart"></i></a>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="order-item card p-md-3">
-                      <div class="row g-2">
-                        <div class="col-md-3">
-                          <img
-                            src="./asset/image/in-product/p-06.webp"
-                            class="img-fluid rounded product-img"
-                            alt="Product"
-                          />
-                        </div>
-                        <div class="col-md-9">
-                          <div class="row g-2">
-                            <div class="col-md-7">
-                              <h5 class="cart-product-name">Shoes</h5>
-                              <p class="text-style">Style: Casual</p>
-                              <p class="mb-0 text-variation">
-                                Variation: Black / Large
-                              </p>
-                              <p class="mb-md-0 text-available">Available</p>
-                            </div>
-                            <div class="col-md-5">
-                              <div class="row g-2">
-                                <div class="col-md-6 col-6">
-                                  <select
-                                    class="form-select form-select-sm"
-                                    id="quantity1"
-                                  >
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-6 col-6">
-                                  <p class="text-price">$49.99</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12 text-end mt-0">
-                              <div class="cart-actions">
-                                <a href="#" class="">REMOVE</a>
-                                <a href="#" class=""
-                                  ><i class="nav-link fa-regular fa-heart"></i
-                                ></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="order-item card p-md-3">
-                      <div class="row g-2">
-                        <div class="col-md-3">
-                          <img
-                            src="./asset/image/in-product/p-06.webp"
-                            class="img-fluid rounded product-img"
-                            alt="Product"
-                          />
-                        </div>
-                        <div class="col-md-9">
-                          <div class="row g-2">
-                            <div class="col-md-7">
-                              <h5 class="cart-product-name">Shoes</h5>
-                              <p class="text-style">Style: Casual</p>
-                              <p class="mb-0 text-variation">
-                                Variation: Black / Large
-                              </p>
-                              <p class="mb-md-0 text-available">Available</p>
-                            </div>
-                            <div class="col-md-5">
-                              <div class="row g-2">
-                                <div class="col-md-6 col-6">
-                                  <select
-                                    class="form-select form-select-sm"
-                                    id="quantity1"
-                                  >
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-6 col-6">
-                                  <p class="text-price">$49.99</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12 text-end mt-0">
-                              <div class="cart-actions">
-                                <a href="#" class="">REMOVE</a>
-                                <a href="#" class=""
-                                  ><i class="nav-link fa-regular fa-heart"></i
-                                ></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Repeat more order-item here if needed -->
                   </div>
+                  <div class="order-item card p-md-3">
+                    <div class="row g-2">
+                      <div class="col-md-3">
+                        <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img"
+                          alt="Product" />
+                      </div>
+                      <div class="col-md-9">
+                        <div class="row g-2">
+                          <div class="col-md-7">
+                            <h5 class="cart-product-name">Shoes</h5>
+                            <p class="text-style">Style: Casual</p>
+                            <p class="mb-0 text-variation">
+                              Variation: Black / Large
+                            </p>
+                            <p class="mb-md-0 text-available">Available</p>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="row g-2">
+                              <div class="col-md-6 col-6">
+                                <select class="form-select form-select-sm" id="quantity1">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 col-6">
+                                <p class="text-price">$49.99</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 text-end mt-0">
+                            <div class="cart-actions">
+                              <a href="#" class="">REMOVE</a>
+                              <a href="#" class=""><i class="nav-link fa-regular fa-heart"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-item card p-md-3">
+                    <div class="row g-2">
+                      <div class="col-md-3">
+                        <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img"
+                          alt="Product" />
+                      </div>
+                      <div class="col-md-9">
+                        <div class="row g-2">
+                          <div class="col-md-7">
+                            <h5 class="cart-product-name">Shoes</h5>
+                            <p class="text-style">Style: Casual</p>
+                            <p class="mb-0 text-variation">
+                              Variation: Black / Large
+                            </p>
+                            <p class="mb-md-0 text-available">Available</p>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="row g-2">
+                              <div class="col-md-6 col-6">
+                                <select class="form-select form-select-sm" id="quantity1">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 col-6">
+                                <p class="text-price">$49.99</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 text-end mt-0">
+                            <div class="cart-actions">
+                              <a href="#" class="">REMOVE</a>
+                              <a href="#" class=""><i class="nav-link fa-regular fa-heart"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Repeat more order-item here if needed -->
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Sticky Bottom Summary -->
-            <div class="border-top p-3 bg-light">
-              <div class="d-flex justify-content-between info-div">
-                <span>Subtotal</span>
-                <span>$2300</span>
-              </div>
-              <div class="d-flex justify-content-between info-div">
-                <span>Estimated Tax</span>
-                <span
-                  ><a href="#" class="text-decoration-underline small"
-                    >Calculate</a
-                  ></span
-                >
-              </div>
-              <hr class="my-2" />
-              <div class="d-flex justify-content-between fw-bold mb-3">
-                <span>Total</span>
-                <span>$2300</span>
-              </div>
-              <a href="checkout.html" class="btn btn-dark w-100 rounded-pill"
-                >Checkout</a
-              >
+          <!-- Sticky Bottom Summary -->
+          <div class="border-top p-3 bg-light">
+            <div class="d-flex justify-content-between info-div">
+              <span>Subtotal</span>
+              <span>$2300</span>
             </div>
+            <div class="d-flex justify-content-between info-div">
+              <span>Estimated Tax</span>
+              <span><a href="#" class="text-decoration-underline small">Calculate</a></span>
+            </div>
+            <hr class="my-2" />
+            <div class="d-flex justify-content-between fw-bold mb-3">
+              <span>Total</span>
+              <span>$2300</span>
+            </div>
+            <a href="checkout.html" class="btn btn-dark w-100 rounded-pill">Checkout</a>
           </div>
         </div>
       </div>
-    </section>
-    <section class="py-5">
-      <div class="container orders-container">
-        <div class="row g-2">
-          <div class="col-12">
-            <h3 class="mb-4">
-              <i class="fa-solid fa-box-open me-2"></i> My Orders
-            </h3>
-            <!-- Order Tabs -->
+    </div>
+  </section>
+  <section class="py-md-5 py-3">
+    <div class="container orders-container">
+      <div class="row g-2">
+        <div class="col-12 d-md-block d-flex justify-content-between">
+          <h3 class="mb-md-4">
+            <i class="fa-solid fa-user me-2"></i>My Profile
+          </h3>
+          <div class="d-md-none">
+            <button class="btn btn-dark btn-sm" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+              ☰ My Account
+            </button>
           </div>
-          <div class="col-md-3">
-            <ul
-              class="nav nav-pills nav--tabs d-flex flex-column nav-justified mb-4"
-              id="ordersTab"
-              role="tablist"
-            >
+        </div>
+        <div class="col-md-3 d-md-block d-none">
+          <ul class="nav nav-pills nav--tabs d-flex flex-column nav-justified" id="ordersTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                type="button">
+                Profile
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link " id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button">
+                All Orders
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button">
+                Pending
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed"
+                type="button">
+                Completed
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas offcanvas-start d-md-none w-75" tabindex="-1" id="mobileSidebar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">My Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav nav-pills nav--tabs d-flex flex-column nav-justified" id="ordersTabMobile" role="tablist">
               <li class="nav-item">
-                <button
-                  class="nav-link active"
-                  id="all-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#all"
-                  type="button"
-                >
+                <button class="nav-link active" id="profile-tab-m" data-bs-toggle="tab" data-bs-target="#profile"
+                  type="button">
+                  Profile
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="all-tab-m" data-bs-toggle="tab" data-bs-target="#all" type="button">
                   All Orders
                 </button>
               </li>
               <li class="nav-item">
-                <button
-                  class="nav-link"
-                  id="pending-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#pending"
-                  type="button"
-                >
+                <button class="nav-link" id="pending-tab-m" data-bs-toggle="tab" data-bs-target="#pending"
+                  type="button">
                   Pending
                 </button>
               </li>
               <li class="nav-item">
-                <button
-                  class="nav-link"
-                  id="completed-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#completed"
-                  type="button"
-                >
+                <button class="nav-link" id="completed-tab-m" data-bs-toggle="tab" data-bs-target="#completed"
+                  type="button">
                   Completed
                 </button>
               </li>
             </ul>
           </div>
-          <div class="col-md-9">
-            <div class="tab-content" id="ordersTabContent">
-              <!-- ALL ORDERS -->
-              <div class="tab-pane fade show active" id="all" role="tabpanel">
-                <!-- Order Card -->
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of Order Card -->
-                <!-- Copy above card for more orders -->
-              </div>
-              <!-- PENDING ORDERS -->
-              <div class="tab-pane fade" id="pending" role="tabpanel">
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-warning text-dark mb-1"
-                            >Pending</span
-                          >
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- COMPLETED ORDERS -->
-              <div class="tab-pane fade" id="completed" role="tabpanel">
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
-                  <div class="row g-3 align-items-center">
-                    <!-- Product Image -->
-                    <div class="col-md-2 text-center text-md-start">
-                      <img
-                        src="./asset/image/in-product/p-06.webp"
-                        class="img-fluid rounded product-img"
-                        alt="Product"
-                      />
-                    </div>
-                    <!-- Product Info -->
-                    <div class="col-md-10">
-                      <div class="row gy-2">
-                        <!-- Name and Details -->
-                        <div class="col-12 col-md-7">
-                          <h5 class="cart-product-name mb-1">Shoes</h5>
-                          <span class="badge bg-success">Completed</span>
-                          <p class="text-variation mb-1">Black / Large</p>
-                          <p class="small text-muted mb-0">
-                            <i class="fa-solid fa-calendar me-1"></i> Ordered
-                            on: 2025-05-01
-                          </p>
-                        </div>
-                        <!-- Price & Qty -->
-                        <div
-                          class="col-12 col-md-5 d-md-flex flex-column justify-content-between"
-                        >
-                          <div class="d-flex justify-content-between flex-wrap">
-                            <p class="mb-1">Qty: <strong>1</strong></p>
-                            <p class="text-price mb-1">$49.99</p>
-                          </div>
-                          <div class="text-md-end text-start mt-2">
-                            <a href="#" class="btn btn-outline-secondary btn-sm"
-                              >View Details</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <section class="footer-section py-md-5 py-3 border-top">
-      <div class="container">
-        <div class="row pb-2">
-          <div class="col-md-8">
-            <div class="brand-logo">
-              <a href="/"
-                ><img src="./asset/image/logo/new-logo.webp" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="col-md-4 align-content-center pb-2">
-            <p class="head">Follow Us</p>
-            <div
-              class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap"
-            >
-              <a href="#" class="social-icon facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-icon instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="social-icon twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="social-icon linkedin"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-icon youtube"
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a href="#" class="social-icon pinterest"
-                ><i class="fab fa-pinterest-p"></i
-              ></a>
-              <a href="#" class="social-icon whatsapp"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="address manufacturer">
-              <p class="head">Full Name and Address of the Manufacturer</p>
-              <p class="">
-                Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
-                01 usa <br />
-                lorem impsum
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="address impoter">
-              <p class="head">Full Name and Address of the Manufacturer</p>
-              <p class="">
-                Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
-                01 usa <br />
-                lorem impsum
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="nav-link">
-              <p class="head">Links</p>
-              <div class="row">
-                <!-- Column 1 -->
-                <div class="col-lg-6 col-6 mb-4 mb-md-0">
-                  <ul class="list-unstyled mb-0 nav">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Blog</a>
-                    </li>
-                  </ul>
+        <div class="col-md-9">
+          <div class="tab-content" id="ordersTabContent">
+            <div class="tab-pane fade show active" id="profile" role="tabpanel">
+              <div class="profile-container">
+                <!-- Avatar & Name -->
+                <div class="d-flex align-items-center mb-4">
+                  <img src="./asset/image/logo/profile.png" alt="User Avatar" class="profile-avatar me-4">
+                  <div>
+                    <h4 class="mb-0">John Doe</h4>
+                  </div>
                 </div>
 
-                <!-- Column 2 -->
-                <div class="col-lg-6 col-6 mb-4 mb-md-0">
-                  <ul class="list-unstyled mb-0 nav">
-                    <li class="nav-item">
-                      <a href="support.html" class="nav-link">Help Center</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="contact-us.html" class="nav-link">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">FAQs</a>
-                    </li>
-                  </ul>
+                <hr>
+
+                <!-- Contact Info -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="info-title"><i class="fa-solid fa-envelope me-2"></i>Email</label>
+                    <p class="form-control-plaintext">john.doe@example.com</p>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="info-title"><i class="fa-solid fa-phone me-2"></i>Phone</label>
+                    <p class="form-control-plaintext">+1 234 567 8900</p>
+                  </div>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-3">
+                  <label class="info-title"><i class="fa-solid fa-location-dot me-2"></i>Shipping Address</label>
+                  <p class="form-control-plaintext">123 Main Street, New York, NY, USA</p>
+                </div>
+                <!-- Edit Button -->
+                <div class="text-end">
+                  <button class="btn btn-outline-secondary rounded-0" data-bs-toggle="modal"
+                    data-bs-target="#editProfileModal">
+                    <i class="fa-solid fa-pen-to-square me-2"></i>Edit Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- ALL ORDERS -->
+            <div class="tab-pane fade " id="all" role="tabpanel">
+              <!-- Order Card -->
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Order Card -->
+              <!-- Copy above card for more orders -->
+            </div>
+            <!-- PENDING ORDERS -->
+            <div class="tab-pane fade" id="pending" role="tabpanel">
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-warning text-dark mb-1">Pending</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- COMPLETED ORDERS -->
+            <div class="tab-pane fade" id="completed" role="tabpanel">
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-item card p-3 p-md-4 mb-2 shadow-sm">
+                <div class="row g-3 align-items-center">
+                  <!-- Product Image -->
+                  <div class="col-md-2 text-center text-md-start">
+                    <img src="./asset/image/in-product/p-06.webp" class="img-fluid rounded product-img" alt="Product" />
+                  </div>
+                  <!-- Product Info -->
+                  <div class="col-md-10">
+                    <div class="row gy-2">
+                      <!-- Name and Details -->
+                      <div class="col-12 col-md-7">
+                        <h5 class="cart-product-name mb-1">Shoes</h5>
+                        <span class="badge bg-success">Completed</span>
+                        <p class="text-variation mb-1">Black / Large</p>
+                        <p class="small text-muted mb-0">
+                          <i class="fa-solid fa-calendar me-1"></i> Ordered
+                          on: 2025-05-01
+                        </p>
+                      </div>
+                      <!-- Price & Qty -->
+                      <div class="col-12 col-md-5 d-md-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="mb-1">Qty: <strong>1</strong></p>
+                          <p class="text-price mb-1">$49.99</p>
+                        </div>
+                        <div class="text-md-end text-start mt-2">
+                          <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal-lg fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-3 rounded-0">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editProfileModalLabel">
+                    <i class="fa-solid fa-user-edit me-2"></i>Edit Profile
+                  </h5>
+                  <button type="button" class="btn btn-dark   rounded-circle" data-bs-dismiss="modal"
+                    aria-label="Close"> <i class="fa-solid fa-xmark text-white"></i></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" value="John Doe">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Phone</label>
+                      <input type="text" class="form-control" value="+1 234 567 8900">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="text" class="form-control" value="user@gmail.com">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Shipping Address</label>
+                      <textarea class="form-control" rows="2">123 Main Street, New York, NY, USA</textarea>
+                    </div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-dark rounded-0">
+                        <i class="fa-solid fa-floppy-disk me-1 "></i> Save Changes
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row border-top">
-          <p class="mt-4 mb-0 small text-center">
-            © 2025 Sameer Raza . All rights reserved.
-          </p>
+      </div>
+    </div>
+  </section>
+  <section class="footer-section py-md-5 py-3 border-top">
+    <div class="container">
+      <div class="row pb-2">
+        <div class="col-md-8">
+          <div class="brand-logo">
+            <a href="/"><img src="./asset/image/logo/new-logo.webp" alt="" /></a>
+          </div>
+        </div>
+        <div class="col-md-4 align-content-center pb-2">
+          <p class="head">Follow Us</p>
+          <div class="social-icons d-flex justify-content-md-start justify-content-center gap-2 flex-wrap">
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="address manufacturer">
+            <p class="head">Full Name and Address of the Manufacturer</p>
+            <p class="">
+              Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+              01 usa <br />
+              lorem impsum
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="address impoter">
+            <p class="head">Full Name and Address of the Manufacturer</p>
+            <p class="">
+              Lorem ipsum dolor sit amet. <br />75034 Paris CEDEX <br />
+              01 usa <br />
+              lorem impsum
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="nav-link">
+            <p class="head">Links</p>
+            <div class="row">
+              <!-- Column 1 -->
+              <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                <ul class="list-unstyled mb-0 nav">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="col-lg-6 col-6 mb-4 mb-md-0">
+                <ul class="list-unstyled mb-0 nav">
+                  <li class="nav-item">
+                    <a href="support.html" class="nav-link">Help Center</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">FAQs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./asset/js/script.js"></script>
-  </body>
+      <div class="row border-top">
+        <p class="mt-4 mb-0 small text-center">
+          © 2025 Sameer Raza . All rights reserved.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./asset/js/script.js"></script>
+</body>
+
 </html>

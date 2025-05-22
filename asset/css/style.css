@@ -338,7 +338,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
-.video-section-two .section-subheading{
+.video-section-two .section-subheading {
   color: var(--bg-white);
   /* font-weight: 700; */
   font-size: var(--font-h5);
@@ -393,6 +393,12 @@ body {
 }
 .products {
   position: relative;
+  border: 1px solid transparent;
+  transition: 0.4s all;
+}
+
+.products:hover {
+  border: 1px solid var(--box-shadow-color-secondary);
 }
 .products-category .product-name-price h6 {
   font-size: 16px;
@@ -405,6 +411,7 @@ body {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: 15px;
+  padding: 5px 10px;
 }
 
 .products .product-name-price .price-section .original-price {
@@ -488,13 +495,12 @@ body {
 }
 
 @media screen and (max-width: 992px) {
- .hero-heading{
-  font-size: 2rem !important;
- }
- .video-section-two .section-heading{
-  font-size: 1.6rem !important;
- }
-
+  .hero-heading {
+    font-size: 2rem !important;
+  }
+  .video-section-two .section-heading {
+    font-size: 1.6rem !important;
+  }
 }
 .cat-hero {
   position: relative;
